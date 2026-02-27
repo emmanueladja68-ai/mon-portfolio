@@ -1,0 +1,254 @@
+{
+  "meta": {
+    "title": "Emmanuel ADJA AMANGOUA | Portfolio Data & IA",
+    "description": "Expert en analyse de données et solutions intelligentes.",
+    "ogImage": "/portrait.jpg",
+    "loadingLabel": "Chargement..."
+  },
+  "navigation": {
+    "brand": "Emmanuel ADJA AMANGOUA",
+    "cta": { "label": "Télécharger CV", "href": "/cv.pdf" },
+    "links": [
+      { "label": "Accueil", "href": "/" },
+      { "label": "À propos", "href": "/about" },
+      { "label": "Projets", "href": "/projects" },
+      { "label": "Expérience", "href": "/experience" },
+      { "label": "Compétences", "href": "/skills" },
+      { "label": "Contact", "href": "/contact" }
+    ],
+    "themeToggle": { "label": "Mode sombre", "on": "Sombre", "off": "Clair" }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Portfolio Data Science",
+      "name": "Emmanuel ADJA AMANGOUA",
+      "title": "Étudiant en Master Data Science et IA",
+      "subtitle": "Je transforme les données en décisions actionnables.",
+      "availability": "Recherche de stage 4–6 mois dès juin 2026",
+      "typingPhrases": ["Master Data Science", "Expert IA", "Analyste BI"],
+      "primaryCta": { "label": "Voir mes projets", "href": "/projects" },
+      "secondaryCta": { "label": "Télécharger CV", "href": "/cv.pdf" }
+    },
+    "services": {
+      "eyebrow": "Expertise",
+      "title": "Mes Services",
+      "description": "Analyse et intelligence.",
+      "items": [
+        { "title": "Data Analysis", "description": "Exploration de données massives." },
+        { "title": "Machine Learning", "description": "Modélisation prédictive." }
+      ]
+    },
+    "trust": {
+      "eyebrow": "Atouts",
+      "title": "Confiance",
+      "description": "Résultats mesurables.",
+      "items": ["Précision", "Rigueur", "Innovation"]
+    }
+  },
+  "about": {
+    "eyebrow": "À propos",
+    "headline": "Étudiant en Master Data Science et IA",
+    "bio": "Étudiant en Master Data Science & IA, à la recherche d’un stage de 4–6 mois dès juin 2026. Focus sur la modélisation, l’EDA et la BI.",
+    "vision": "Appliquer la donnée pour créer des impacts métiers mesurables.",
+    "valuesTitle": "Valeurs",
+    "values": [
+      { "title": "Innovation", "description": "Utilisation des derniers modèles IA." },
+      { "title": "Rigueur", "description": "Analyses statistiques précises." }
+    ],
+    "educationTitle": "Formations",
+    "education": [
+      {
+        "year": "2025–2026",
+        "title": "Master Data Science & IA",
+        "organization": "AI2 – Paris",
+        "location": "Paris",
+        "details": "En cours",
+        "highlights": ["Apprentissage profond", "Big Data"]
+      },
+      {
+        "year": "2022–2025",
+        "title": "Licence Informatique – MIAGE",
+        "organization": "Institut Universitaire d’Abidjan",
+        "highlights": ["Développement", "Bases de données"]
+      },
+      {
+        "year": "2021–2022",
+        "title": "Baccalauréat Scientifique – Série D"
+      }
+    ],
+    "languagesTitle": "Langues",
+    "languages": ["Français : Courant"],
+    "interestsTitle": "Centres d’intérêt",
+    "interests": ["Cuisine", "Voyage", "Natation"]
+  },
+  "experience": {
+    "eyebrow": "Parcours",
+    "headline": "Mon Expérience",
+    "description": "Mon parcours académique et professionnel.",
+    "keyImpact": "Impact",
+    "items": [
+      {
+        "year": "2026",
+        "title": "Hackathon IA Agriculture (SIA)",
+        "company": "Salon International de l’Agriculture",
+        "summary": "Création d'un outil intelligent pour mesurer l'impact financier de l’élevage.",
+        "highlights": ["Évaluation financière automatisée", "Traitement de données élevage"]
+      },
+      {
+        "year": "2025",
+        "title": "Hackathon Cyber",
+        "company": "Ministère de la Défense",
+        "summary": "Modèle ML de détection d'incidents informatiques en temps réel.",
+        "highlights": ["Détection temps réel", "Modélisation ML"]
+      },
+      {
+        "year": "2025",
+        "title": "Sport Analytics & Dashboard",
+        "company": "Projet académique",
+        "summary": "Analyse exploratoire et dashboard interactif pour suivi de performance.",
+        "highlights": ["EDA", "Streamlit"]
+      },
+      {
+        "year": "2025",
+        "title": "Business Intelligence PME",
+        "company": "Projet",
+        "summary": "Tableaux de bord Power BI pour pilotage commercial.",
+        "highlights": ["Indicateurs clés", "Reporting"]
+      },
+      {
+        "year": "2024",
+        "title": "Football Match Predictor",
+        "company": "Projet",
+        "summary": "Modèle de classification multi-classes (Victoire/Nul/Défaite).",
+        "highlights": ["Feature engineering", "Évaluation multi-classes"]
+      },
+      {
+        "year": "2024",
+        "title": "Plateforme GED",
+        "company": "Projet",
+        "summary": "Développement Full‑stack pour la gestion électronique de documents.",
+        "highlights": ["PHP", "MySQL"]
+      }
+    ]
+  },
+  "skills": {
+    "eyebrow": "Compétences",
+    "headline": "Stack Technique",
+    "description": "Mes outils au quotidien.",
+    "categories": [
+      { "name": "Stack", "items": ["Python", "Pandas", "NumPy", "scikit-learn", "SQL", "MySQL"] },
+      { "name": "Data Science", "items": ["Feature Engineering", "EDA", "Statistiques", "Classification"] },
+      { "name": "BI & Web", "items": ["Power BI", "Tableau", "Streamlit", "Matplotlib"] }
+    ]
+  },
+  "projects": {
+    "eyebrow": "Réalisations",
+    "headline": "Mes Projets",
+    "description": "Démonstrations techniques.",
+    "filterLabel": "Techno",
+    "allLabel": "Tous",
+    "buttons": { "projectLabel": "Voir", "codeLabel": "Code" },
+    "counter": {
+      "photo": "Photo {{current}} / {{total}}",
+      "video": "Vidéo {{current}} / {{total}}"
+    },
+    "videoDemos": {
+      "title": "Voir les démos des projets en vidéo",
+      "sportDashboard": {
+        "title": "Sport Dashboard",
+        "items": ["/sport_dashboard/demo1.mp4", "/sport_dashboard/demo2.mp4", "/sport_dashboard/demo3.mp4"]
+      }
+    },
+    "items": [
+      {
+        "name": "Hackathon IA Agriculture (SIA 2026)",
+        "description": "Création d'un outil intelligent pour l'impact financier de l'élevage.",
+        "impact": "Évaluation automatique de l'impact financier pour l’élevage.",
+        "tech": ["IA", "ML"],
+        "stack": ["Python", "Pandas", "scikit-learn"],
+        "links": { "project": "/hackaton/demo1.mp4", "code": "https://github.com/emmanueladja" },
+        "gallery": ["/hackaton/demo1.mp4", "/hackaton/fc-1.png", "/hackaton/fc-2.png", "/hackaton/fc-3.png"]
+      },
+      {
+        "name": "Hackathon Cyber (Ministère de la Défense 2025)",
+        "description": "Modèle ML de détection d'incidents informatiques en temps réel.",
+        "impact": "Amélioration de la réactivité face aux incidents.",
+        "tech": ["ML", "Cyber"],
+        "stack": ["Python", "scikit-learn"],
+        "links": { "project": "https://www.linkedin.com/in/amangoua-n-guetta-emmanuel-adja-955ba3256", "code": "https://github.com/emmanueladja" }
+      },
+      {
+        "name": "Sport Analytics & Dashboard",
+        "description": "Analyse de performance via EDA et Streamlit.",
+        "impact": "Suivi et visualisation des performances sportives.",
+        "tech": ["BI"],
+        "stack": ["Streamlit", "Pandas", "Matplotlib"],
+        "links": { "project": "/sport_dashboard/demo1.mp4", "code": "https://github.com/emmanueladja" },
+        "gallery": ["/sport_dashboard/demo1.mp4", "/sport_dashboard/demo2.mp4", "/sport_dashboard/demo3.mp4"]
+      },
+      {
+        "name": "Business Intelligence PME",
+        "description": "Dashboards Power BI pour pilotage commercial.",
+        "impact": "Indicateurs clés pour décisions opérationnelles.",
+        "tech": ["BI"],
+        "stack": ["Power BI"],
+        "links": { "project": "/bi_pme/pme-1.png", "code": "https://github.com/emmanueladja" },
+        "gallery": ["/bi_pme/pme-1.png", "/bi_pme/pme-2.png", "/bi_pme/pme-3.png", "/bi_pme/pme-4.png", "/bi_pme/pme-5.png"]
+      },
+      {
+        "name": "Football Match Predictor",
+        "description": "Modèle de classification multi-classes pour Victoire/Nul/Défaite.",
+        "impact": "Prédictions exploitables pour l’analyse de matchs.",
+        "tech": ["ML"],
+        "stack": ["Python", "scikit-learn", "Pandas"],
+        "links": { "project": "/football_predictor/fc-1.png", "code": "https://github.com/emmanueladja" },
+        "gallery": [
+          "/football_predictor/fc-1.png",
+          "/football_predictor/fc-2.png",
+          "/football_predictor/fc-3.png",
+          "/football_predictor/fc-4.png",
+          "/football_predictor/fc-5.png",
+          "/football_predictor/fc-6.png",
+          "/football_predictor/fc-7.png",
+          "/football_predictor/fc-8.png",
+          "/football_predictor/fc-9.png",
+          "/football_predictor/fc-10.png",
+          "/football_predictor/fc-11.png",
+          "/football_predictor/fc-12.png",
+          "/football_predictor/fc-13.png",
+          "/football_predictor/fc-14.png",
+          "/football_predictor/fc-15.png"
+        ]
+      },
+      {
+        "name": "Plateforme GED",
+        "description": "Développement Full‑stack (PHP, MySQL).",
+        "impact": "Gestion centralisée et sécurisée des documents.",
+        "tech": ["Web"],
+        "stack": ["PHP", "MySQL"],
+        "links": { "project": "https://www.linkedin.com/in/amangoua-n-guetta-emmanuel-adja-955ba3256", "code": "https://github.com/emmanueladja" }
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Discutons ensemble.",
+    "form": {
+      "nameLabel": "Nom", "emailLabel": "Email", "messageLabel": "Message",
+      "submitLabel": "Envoyer", "successMessage": "Envoyé !", "errorMessage": "Erreur"
+    },
+    "info": {
+      "email": "emmanueladja68@gmail.com",
+      "phone": "+33 7 46 57 50 64",
+      "location": "Île-de-France",
+      "availability": "Disponible pour un stage 4–6 mois dès juin 2026",
+      "github": "https://github.com/emmanueladja",
+      "linkedin": "https://www.linkedin.com/in/amangoua-n-guetta-emmanuel-adja-955ba3256"
+    }
+  },
+  "footer": {
+    "headline": "Travaillons ensemble.",
+    "cta": { "label": "Contact", "href": "/contact" },
+    "copyright": "© 2026 Emmanuel ADJA"
+  }
+}

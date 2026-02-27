@@ -1,0 +1,254 @@
+{
+  "meta": {
+    "title": "Emmanuel ADJA AMANGOUA | Data & AI Portfolio",
+    "description": "Expert in data analysis and intelligent solutions.",
+    "ogImage": "/portrait.jpg",
+    "loadingLabel": "Loading..."
+  },
+  "navigation": {
+    "brand": "Emmanuel ADJA AMANGOUA",
+    "cta": { "label": "Download CV", "href": "/cv.pdf" },
+    "links": [
+      { "label": "Home", "href": "/" },
+      { "label": "About", "href": "/about" },
+      { "label": "Projects", "href": "/projects" },
+      { "label": "Experience", "href": "/experience" },
+      { "label": "Skills", "href": "/skills" },
+      { "label": "Contact", "href": "/contact" }
+    ],
+    "themeToggle": { "label": "Dark mode", "on": "Dark", "off": "Light" }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Data Science Portfolio",
+      "name": "Emmanuel ADJA AMANGOUA",
+      "title": "Master's Student in Data Science and AI",
+      "subtitle": "I turn data into actionable decisions.",
+      "availability": "Seeking 4–6 month internship from June 2026",
+      "typingPhrases": ["Master's in Data Science", "AI Expert", "BI Analyst"],
+      "primaryCta": { "label": "View my projects", "href": "/projects" },
+      "secondaryCta": { "label": "Download CV", "href": "/cv.pdf" }
+    },
+    "services": {
+      "eyebrow": "Expertise",
+      "title": "My Services",
+      "description": "Analysis and intelligence.",
+      "items": [
+        { "title": "Data Analysis", "description": "Massive data exploration." },
+        { "title": "Machine Learning", "description": "Predictive modeling." }
+      ]
+    },
+    "trust": {
+      "eyebrow": "Assets",
+      "title": "Trust",
+      "description": "Measurable results.",
+      "items": ["Precision", "Rigor", "Innovation"]
+    }
+  },
+  "about": {
+    "eyebrow": "About",
+    "headline": "Master's Student in Data Science and AI",
+    "bio": "Master's student in Data Science & AI, seeking a 4–6 month internship from June 2026. Focus on modeling, EDA and BI.",
+    "vision": "Apply data to create measurable business impact.",
+    "valuesTitle": "Values",
+    "values": [
+      { "title": "Innovation", "description": "Using the latest AI models." },
+      { "title": "Rigor", "description": "Accurate statistical analysis." }
+    ],
+    "educationTitle": "Education",
+    "education": [
+      {
+        "year": "2025–2026",
+        "title": "Master in Data Science & AI",
+        "organization": "AI2 – Paris",
+        "location": "Paris",
+        "details": "In progress",
+        "highlights": ["Deep Learning", "Big Data"]
+      },
+      {
+        "year": "2022–2025",
+        "title": "Bachelor in Computer Science – MIAGE",
+        "organization": "Université d’Abidjan",
+        "highlights": ["Software Development", "Databases"]
+      },
+      {
+        "year": "2021–2022",
+        "title": "Scientific Baccalaureate – Series D"
+      }
+    ],
+    "languagesTitle": "Languages",
+    "languages": ["French: Fluent"],
+    "interestsTitle": "Interests",
+    "interests": ["Cooking", "Travel", "Swimming"]
+  },
+  "experience": {
+    "eyebrow": "Journey",
+    "headline": "My Experience",
+    "description": "My academic and professional background.",
+    "keyImpact": "Impact",
+    "items": [
+      {
+        "year": "2026",
+        "title": "AI Agriculture Hackathon (SIA)",
+        "company": "Salon International de l’Agriculture",
+        "summary": "Built an intelligent tool to measure the financial impact of livestock.",
+        "highlights": ["Automated financial evaluation", "Livestock data processing"]
+      },
+      {
+        "year": "2025",
+        "title": "Cyber Hackathon",
+        "company": "Ministry of Defence",
+        "summary": "Real‑time incident detection using ML models.",
+        "highlights": ["Real‑time detection", "ML modeling"]
+      },
+      {
+        "year": "2025",
+        "title": "Sport Analytics & Dashboard",
+        "company": "Academic project",
+        "summary": "Exploratory analysis and interactive dashboard for performance tracking.",
+        "highlights": ["EDA", "Streamlit"]
+      },
+      {
+        "year": "2025",
+        "title": "SME Business Intelligence",
+        "company": "Project",
+        "summary": "Power BI dashboards for sales and operations.",
+        "highlights": ["Key indicators", "Reporting"]
+      },
+      {
+        "year": "2024",
+        "title": "Football Match Predictor",
+        "company": "Project",
+        "summary": "Multi‑class classification model (Win/Draw/Loss).",
+        "highlights": ["Feature engineering", "Multi‑class evaluation"]
+      },
+      {
+        "year": "2024",
+        "title": "DMS Platform",
+        "company": "Project",
+        "summary": "Full‑stack development for a document management system.",
+        "highlights": ["PHP", "MySQL"]
+      }
+    ]
+  },
+  "skills": {
+    "eyebrow": "Skills",
+    "headline": "Technical Stack",
+    "description": "My daily tools.",
+    "categories": [
+      { "name": "Stack", "items": ["Python", "Pandas", "NumPy", "scikit-learn", "SQL", "MySQL"] },
+      { "name": "Data Science", "items": ["Feature Engineering", "EDA", "Statistics", "Classification"] },
+      { "name": "BI & Web", "items": ["Power BI", "Tableau", "Streamlit", "Matplotlib"] }
+    ]
+  },
+  "projects": {
+    "eyebrow": "Achievements",
+    "headline": "My Projects",
+    "description": "Technical demonstrations.",
+    "filterLabel": "Tech",
+    "allLabel": "All",
+    "buttons": { "projectLabel": "View", "codeLabel": "Code" },
+    "counter": {
+      "photo": "Photo {{current}} / {{total}}",
+      "video": "Video {{current}} / {{total}}"
+    },
+    "videoDemos": {
+      "title": "Watch project video demos",
+      "sportDashboard": {
+        "title": "Sport Dashboard",
+        "items": ["/sport_dashboard/demo1.mp4", "/sport_dashboard/demo2.mp4", "/sport_dashboard/demo3.mp4"]
+      }
+    },
+    "items": [
+      {
+        "name": "AI Agriculture Hackathon (SIA 2026)",
+        "description": "Built an intelligent tool for livestock financial impact.",
+        "impact": "Automated evaluation of financial impact for livestock.",
+        "tech": ["AI", "ML"],
+        "stack": ["Python", "Pandas", "scikit-learn"],
+        "links": { "project": "/hackaton/demo1.mp4", "code": "https://github.com/emmanueladja" },
+        "gallery": ["/hackaton/demo1.mp4", "/hackaton/fc-1.png", "/hackaton/fc-2.png", "/hackaton/fc-3.png"]
+      },
+      {
+        "name": "Cyber Hackathon (Ministry of Defence 2025)",
+        "description": "Real‑time incident detection with ML.",
+        "impact": "Improved responsiveness to incidents.",
+        "tech": ["ML", "Cyber"],
+        "stack": ["Python", "scikit-learn"],
+        "links": { "project": "https://www.linkedin.com/in/amangoua-n-guetta-emmanuel-adja-955ba3256", "code": "https://github.com/emmanueladja" }
+      },
+      {
+        "name": "Sport Analytics & Dashboard",
+        "description": "Performance analysis with EDA and Streamlit.",
+        "impact": "Tracking and visualizing sports performance.",
+        "tech": ["BI"],
+        "stack": ["Streamlit", "Pandas", "Matplotlib"],
+        "links": { "project": "/sport_dashboard/demo1.mp4", "code": "https://github.com/emmanueladja" },
+        "gallery": ["/sport_dashboard/demo1.mp4", "/sport_dashboard/demo2.mp4", "/sport_dashboard/demo3.mp4"]
+      },
+      {
+        "name": "SME Business Intelligence",
+        "description": "Power BI dashboards for business monitoring.",
+        "impact": "Key indicators for operational decisions.",
+        "tech": ["BI"],
+        "stack": ["Power BI"],
+        "links": { "project": "/bi_pme/pme-1.png", "code": "https://github.com/emmanueladja" },
+        "gallery": ["/bi_pme/pme-1.png", "/bi_pme/pme-2.png", "/bi_pme/pme-3.png", "/bi_pme/pme-4.png", "/bi_pme/pme-5.png"]
+      },
+      {
+        "name": "Football Match Predictor",
+        "description": "Multi‑class classification to predict Win/Draw/Loss.",
+        "impact": "Actionable predictions for match analysis.",
+        "tech": ["ML"],
+        "stack": ["Python", "scikit-learn", "Pandas"],
+        "links": { "project": "/football_predictor/fc-1.png", "code": "https://github.com/emmanueladja" },
+        "gallery": [
+          "/football_predictor/fc-1.png",
+          "/football_predictor/fc-2.png",
+          "/football_predictor/fc-3.png",
+          "/football_predictor/fc-4.png",
+          "/football_predictor/fc-5.png",
+          "/football_predictor/fc-6.png",
+          "/football_predictor/fc-7.png",
+          "/football_predictor/fc-8.png",
+          "/football_predictor/fc-9.png",
+          "/football_predictor/fc-10.png",
+          "/football_predictor/fc-11.png",
+          "/football_predictor/fc-12.png",
+          "/football_predictor/fc-13.png",
+          "/football_predictor/fc-14.png",
+          "/football_predictor/fc-15.png"
+        ]
+      },
+      {
+        "name": "DMS Platform",
+        "description": "Full‑stack development (PHP, MySQL).",
+        "impact": "Centralized and secure document management.",
+        "tech": ["Web"],
+        "stack": ["PHP", "MySQL"],
+        "links": { "project": "https://www.linkedin.com/in/amangoua-n-guetta-emmanuel-adja-955ba3256", "code": "https://github.com/emmanueladja" }
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let's talk.",
+    "form": {
+      "nameLabel": "Name", "emailLabel": "Email", "messageLabel": "Message",
+      "submitLabel": "Send", "successMessage": "Sent!", "errorMessage": "Error"
+    },
+    "info": {
+      "email": "emmanueladja68@gmail.com",
+      "phone": "+33 7 46 57 50 64",
+      "location": "Île-de-France",
+      "availability": "Available for a 4–6 month internship from June 2026",
+      "github": "https://github.com/emmanueladja",
+      "linkedin": "https://www.linkedin.com/in/amangoua-n-guetta-emmanuel-adja-955ba3256"
+    }
+  },
+  "footer": {
+    "headline": "Let's work together.",
+    "cta": { "label": "Contact", "href": "/contact" },
+    "copyright": "© 2026 Emmanuel ADJA"
+  }
+}

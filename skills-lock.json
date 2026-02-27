@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "skills": {
+    "copywriting": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "computedHash": "82f98239f6fb27c028e0339b25356c2ae4d1933689ee2d8b707f606381fc9170"
+    },
+    "marketing-ideas": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "computedHash": "b036877c0ee76bda06062f5d9bdaf6dbf93d09d64b8a6e42f674c5ac403f9e19"
+    },
+    "seo-audit": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "computedHash": "9ba943642a232ac724060f34c3981dd8c1f21226d5a42d611dda6b4368e07c2f"
+    }
+  }
+}
