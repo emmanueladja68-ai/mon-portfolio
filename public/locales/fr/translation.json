@@ -10,13 +10,63 @@
     "cta": { "label": "Télécharger CV", "href": "/cv.pdf" },
     "links": [
       { "label": "Accueil", "href": "/" },
-      { "label": "À propos", "href": "/about" },
+      { "label": "Expériences", "href": "/experience" },
       { "label": "Projets", "href": "/projects" },
-      { "label": "Expérience", "href": "/experience" },
+      { "label": "Mon Projet Professionnel", "href": "/professional" },
       { "label": "Compétences", "href": "/skills" },
+      { "label": "À propos", "href": "/about" },
       { "label": "Contact", "href": "/contact" }
     ],
     "themeToggle": { "label": "Mode sombre", "on": "Sombre", "off": "Clair" }
+  },
+  "professional": {
+    "eyebrow": "Stratégie",
+    "title": "Mon Projet Professionnel",
+    "subtitle": "Plan clair, impact mesurable.",
+    "anchors": [
+      { "label": "Introduction", "href": "#intro" },
+      { "label": "3 Piliers", "href": "#pillars" },
+      { "label": "Parcours & Compétences", "href": "#path-skills" },
+      { "label": "Pitch", "href": "#pitch" },
+      { "label": "Vision", "href": "#vision" }
+    ],
+    "intro": {
+      "badge": "ADJA Emmanuel — Master DS & IA",
+      "text": "Étudiant en Master Data Science & IA, je structure mon projet autour d’axes concrets pour maximiser l’impact de la donnée."
+    },
+    "pillars": {
+      "eyebrow": "Secteurs Cibles",
+      "title": "Les 3 Piliers",
+      "description": "Trois terrains d’application où la Data crée de la valeur.",
+      "items": [
+        { "title": "Sport Analytics", "description": "Mesure de performance, scouting, détection d’insights temps réel pour optimiser la prise de décision." },
+        { "title": "Automobile", "description": "Maintenance prédictive, télématique, optimisation des flux et sécurité via l’analyse embarquée." },
+        { "title": "Humanitaire (ONG)", "description": "Allocation de ressources, suivi d’impact, tableaux de bord pour piloter l’action sur le terrain." }
+      ]
+    },
+    "path": {
+      "eyebrow": "Capacités",
+      "title": "Mon Parcours & Compétences",
+      "timelineTitle": "Parcours",
+      "skillsTitle": "Compétences",
+      "timeline": [
+        "Hackathon IA (SIA 2026) — outil LLMs pour chiffrage d’impact",
+        "Hackathon Cyber (Ministère de la Défense 2025) — détection temps réel",
+        "Football Match Predictor — classification multi-classes",
+        "Sport Analytics Dashboard — visualisation Streamlit",
+        "Plateforme GED — développement Full‑stack (PHP/MySQL)"
+      ],
+      "skills": ["Python", "Pandas", "scikit‑learn", "SQL", "Power BI", "Streamlit"]
+    },
+    "pitch": {
+      "eyebrow": "Positionnement",
+      "title": "Mon Pitch",
+      "text": "Je transforme des données hétérogènes en décisions actionnables. Mon objectif: livrer des outils clairs, mesurables et utiles aux métiers."
+    },
+    "vision": {
+      "note": "La Data Science est universelle : elle s’adapte aux défis du Sport, de l’Automobile et de l’Humanitaire pour créer un impact réel."
+    },
+    "backToTop": "Haut de section"
   },
   "home": {
     "hero": {

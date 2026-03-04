@@ -97,6 +97,25 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Visual Experience Section */}
+      <section id="experience-visuelle" className="relative min-h-screen flex items-center justify-center">
+        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950 via-background to-background opacity-90" />
+        <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(1px 1px at 40px 40px, rgba(140,140,160,0.08) 1px, transparent 0)' }} />
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 1.1 }}
+          className="relative max-w-4xl mx-auto px-6 text-center"
+        >
+          <blockquote className="font-serif text-2xl md:text-4xl leading-relaxed text-foreground/90">
+            <span className="text-foreground/90">
+              La Data Science est <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-400">universelle</span>. Ce qui m'intéresse, ce n'est pas seulement le code, c'est de comprendre les <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-400">problématiques</span> d'un métier (qu'il soit sportif, ingénieur ou humanitaire) et d'y apporter une <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-400">solution mathématique</span>.
+            </span>
+          </blockquote>
+        </motion.div>
+      </section>
+
       {/* Services Section */}
       <section className="space-y-12">
         <SectionHeader

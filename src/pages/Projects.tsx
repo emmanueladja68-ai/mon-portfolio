@@ -14,7 +14,7 @@ export default function Projects() {
   const reduceMotion = useReducedMotion()
   const { items, allLabel, filterLabel, headline, description, eyebrow } =
     t('projects', { returnObjects: true }) as any
-  const videoDemos = t('projects.videoDemos', { returnObjects: true }) as any
+  const videoDemos = undefined as any
   
   const filters = useMemo(() => {
     if (!items) return []
@@ -96,7 +96,9 @@ export default function Projects() {
 
             {Array.isArray(project?.gallery) && project.gallery.length > 0 ? (
               <MediaCarousel items={project.gallery} title={project.name} />
-            ) : null}
+            ) : (
+              <PlaceholderVisual />
+            )}
 
             <div className="space-y-3">
                   <h3 className="text-2xl font-bold tracking-tight">{project.name}</h3>
@@ -127,34 +129,19 @@ export default function Projects() {
         ))}
       </div>
 
-      {Array.isArray(videoDemos?.sportDashboard?.items) && videoDemos.sportDashboard.items.length > 0 ? (
-        <div className="space-y-6 pt-8 border-t border-border">
-          <SectionHeader
-            eyebrow={undefined}
-            title={videoDemos.title}
-            description={videoDemos.sportDashboard.title}
-          />
-          <MotionReveal>
-            <MediaCarousel items={videoDemos.sportDashboard.items} title={videoDemos.sportDashboard.title} />
-          </MotionReveal>
-        </div>
-      ) : null}
+      {null}
     </div>
   )
 }
 
 function MediaCarousel({ items, title }: { items: string[]; title: string }) {
   const { t } = useTranslation()
-  const [index, setIndex] = useState(0)
   const total = items.length
-  const current = items[index]
+  const current = items[0]
   const isVideo = /\.mp4(\?|$)/i.test(current)
-
-  const prev = () => setIndex((i) => (i - 1 + total) % total)
-  const next = () => setIndex((i) => (i + 1) % total)
   const counterText = isVideo
-    ? t('projects.counter.video', { current: index + 1, total })
-    : t('projects.counter.photo', { current: index + 1, total })
+    ? t('projects.counter.video', { current: 1, total })
+    : t('projects.counter.photo', { current: 1, total })
 
   return (
     <div className="relative rounded-lg overflow-hidden border border-border/50 bg-muted/20">
@@ -178,28 +165,24 @@ function MediaCarousel({ items, title }: { items: string[]; title: string }) {
         />
       )}
       {total > 1 ? (
-        <>
-          <button
-            type="button"
-            onClick={prev}
-            className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-background/70 backdrop-blur border border-border px-3 py-1 text-sm"
-            aria-label="Previous"
-          >
-            ‹
-          </button>
-          <button
-            type="button"
-            onClick={next}
-            className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-background/70 backdrop-blur border border-border px-3 py-1 text-sm"
-            aria-label="Next"
-          >
-            ›
-          </button>
-          <div className="absolute bottom-2 right-2 text-xs px-2 py-0.5 rounded bg-background/70 border border-border">
-            {counterText}
-          </div>
-        </>
+        <div className="absolute bottom-2 right-2 text-xs px-2 py-0.5 rounded bg-background/70 border border-border">
+          {counterText}
+        </div>
       ) : null}
+    </div>
+  )
+}
+
+function PlaceholderVisual() {
+  return (
+    <div className="w-full aspect-video rounded-lg overflow-hidden border border-border/50 bg-gradient-to-br from-muted/60 via-background to-muted/40 relative">
+      <div className="absolute inset-0 opacity-60" style={{ backgroundImage: 'radial-gradient(1px 1px at 20px 20px, rgba(100,100,120,0.3) 1px, transparent 0)' }} />
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="text-center text-muted-foreground">
+          <div className="text-5xl font-black tracking-tight">∑</div>
+          <div className="text-xs mt-1">Data Flow • Code • ML</div>
+        </div>
+      </div>
     </div>
   )
 }

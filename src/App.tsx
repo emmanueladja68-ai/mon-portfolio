@@ -11,6 +11,7 @@ const About = lazy(() => import('./pages/About'))
 const Projects = lazy(() => import('./pages/Projects'))
 const Experience = lazy(() => import('./pages/Experience'))
 const Skills = lazy(() => import('./pages/Skills'))
+const Professional = lazy(() => import('./pages/Professional'))
 const Contact = lazy(() => import('./pages/Contact'))
 
 const childRoutes = [
@@ -19,6 +20,7 @@ const childRoutes = [
   { path: 'projects', element: <Projects /> },
   { path: 'experience', element: <Experience /> },
   { path: 'skills', element: <Skills /> },
+  { path: 'professional', element: <Professional /> },
   { path: 'contact', element: <Contact /> },
 ]
 

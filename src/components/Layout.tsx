@@ -184,17 +184,28 @@ export function Layout() {
 
       {/* Mobile Navigation - Top Bar */}
       <header className="md:hidden fixed top-0 left-0 right-0 z-40 flex items-center justify-between p-4 bg-background/80 backdrop-blur-md border-b border-border">
-        <NavLink to="/" className="font-bold text-lg tracking-tighter">
+        <NavLink to={getLocalizedPath('/')} className="font-bold text-lg tracking-tighter">
           {navigation.brand}
         </NavLink>
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Menu"
-        >
-          {isMobileMenuOpen ? <X /> : <Menu />}
-        </Button>
+        <div className="flex items-center gap-2">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="rounded-full w-9 h-9"
+            onClick={toggleLang}
+            aria-label="Toggle Language"
+          >
+            <span className="text-xs font-bold">{i18n.language.substring(0, 2).toUpperCase()}</span>
+          </Button>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Menu"
+          >
+            {isMobileMenuOpen ? <X /> : <Menu />}
+          </Button>
+        </div>
       </header>
 
       {/* Mobile Menu Overlay */}

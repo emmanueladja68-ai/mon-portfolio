@@ -10,13 +10,63 @@
     "cta": { "label": "Download CV", "href": "/cv.pdf" },
     "links": [
       { "label": "Home", "href": "/" },
-      { "label": "About", "href": "/about" },
-      { "label": "Projects", "href": "/projects" },
       { "label": "Experience", "href": "/experience" },
+      { "label": "Projects", "href": "/projects" },
+      { "label": "My Professional Project", "href": "/professional" },
       { "label": "Skills", "href": "/skills" },
+      { "label": "About", "href": "/about" },
       { "label": "Contact", "href": "/contact" }
     ],
     "themeToggle": { "label": "Dark mode", "on": "Dark", "off": "Light" }
+  },
+  "professional": {
+    "eyebrow": "Strategy",
+    "title": "My Professional Project",
+    "subtitle": "Clear plan, measurable impact.",
+    "anchors": [
+      { "label": "Introduction", "href": "#intro" },
+      { "label": "3 Pillars", "href": "#pillars" },
+      { "label": "Path & Skills", "href": "#path-skills" },
+      { "label": "Pitch", "href": "#pitch" },
+      { "label": "Vision", "href": "#vision" }
+    ],
+    "intro": {
+      "badge": "ADJA Emmanuel — Master DS & AI",
+      "text": "Master’s student in Data Science & AI, I structure my project around concrete pillars to maximize data impact."
+    },
+    "pillars": {
+      "eyebrow": "Target Sectors",
+      "title": "The 3 Pillars",
+      "description": "Three application fields where data creates value.",
+      "items": [
+        { "title": "Sport Analytics", "description": "Performance metrics, scouting, real‑time insights to improve decision‑making." },
+        { "title": "Automotive", "description": "Predictive maintenance, telematics, flow optimization and safety via embedded analytics." },
+        { "title": "Humanitarian (NGO)", "description": "Resource allocation, impact tracking, dashboards to steer field operations." }
+      ]
+    },
+    "path": {
+      "eyebrow": "Capabilities",
+      "title": "My Path & Skills",
+      "timelineTitle": "Path",
+      "skillsTitle": "Skills",
+      "timeline": [
+        "AI Hackathon (SIA 2026) — LLMs tool for impact estimation",
+        "Cyber Hackathon (Ministry of Defence 2025) — real‑time detection",
+        "Football Match Predictor — multi‑class classification",
+        "Sport Analytics Dashboard — Streamlit visualization",
+        "DMS Platform — Full‑stack development (PHP/MySQL)"
+      ],
+      "skills": ["Python", "Pandas", "scikit‑learn", "SQL", "Power BI", "Streamlit"]
+    },
+    "pitch": {
+      "eyebrow": "Positioning",
+      "title": "My Pitch",
+      "text": "I turn heterogeneous data into actionable decisions. My goal: deliver clear, measurable tools that drive business impact."
+    },
+    "vision": {
+      "note": "Data Science is universal: it adapts to the challenges of Sports, Automotive and Humanitarian sectors to create real impact."
+    },
+    "backToTop": "Back to top"
   },
   "home": {
     "hero": {
