@@ -81,11 +81,11 @@ export default function Home() {
           </div>
 
           {/* Hero Visual */}
-          <motion.div style={{ y: y1 }} className="relative hidden lg:block">
+          <motion.div style={{ y: y1 }} className="relative block">
             <div className="absolute -top-20 -right-20 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px] opacity-50 dark:opacity-20" />
             <div className="absolute -bottom-20 -left-20 w-[400px] h-[400px] bg-indigo-500/20 rounded-full blur-[100px] opacity-50 dark:opacity-20" />
             
-            <div className="relative aspect-square rounded-2xl border border-border/50 bg-background/50 backdrop-blur-sm overflow-hidden flex items-center justify-center">
+            <div className="relative aspect-square rounded-2xl border border-border/50 bg-card/70 backdrop-blur-md overflow-hidden flex items-center justify-center ring-1 ring-primary/20 shadow-2xl">
               <img
                 src="/portrait.jpg"
                 alt="Portrait Emmanuel ADJA AMANGOUA"
@@ -99,20 +99,27 @@ export default function Home() {
 
       {/* Visual Experience Section */}
       <section id="experience-visuelle" className="relative min-h-screen flex items-center justify-center">
-        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950 via-background to-background opacity-90" />
-        <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(1px 1px at 40px 40px, rgba(140,140,160,0.08) 1px, transparent 0)' }} />
+        <motion.div
+          className="absolute inset-0"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          style={{ backgroundImage: 'radial-gradient(1px 1px at 38px 38px, rgba(120,120,150,0.08) 1px, transparent 0)' }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-muted/30 via-background to-muted/30 dark:from-zinc-900/60 dark:via-background dark:to-zinc-900/60" />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 1.1 }}
-          className="relative max-w-4xl mx-auto px-6 text-center"
+          className="relative max-w-4xl mx-auto px-6"
         >
-          <blockquote className="font-serif text-2xl md:text-4xl leading-relaxed text-foreground/90">
-            <span className="text-foreground/90">
+          <div className="rounded-2xl border border-border/60 bg-card/80 backdrop-blur-md shadow-2xl p-6 md:p-12">
+            <blockquote className="font-serif italic text-2xl md:text-4xl leading-relaxed text-foreground/90 tracking-tight text-center">
               La Data Science est <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-400">universelle</span>. Ce qui m'intéresse, ce n'est pas seulement le code, c'est de comprendre les <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-400">problématiques</span> d'un métier (qu'il soit sportif, ingénieur ou humanitaire) et d'y apporter une <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-400">solution mathématique</span>.
-            </span>
-          </blockquote>
+            </blockquote>
+          </div>
         </motion.div>
       </section>
 
