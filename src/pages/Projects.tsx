@@ -135,12 +135,15 @@ export default function Projects() {
 
 function MediaCarousel({ items, title }: { items: string[]; title: string }) {
   const { t } = useTranslation()
+  const [index, setIndex] = useState(0)
   const total = items.length
-  const current = items[0]
+  const current = items[index]
   const isVideo = /\.mp4(\?|$)/i.test(current)
   const counterText = isVideo
-    ? t('projects.counter.video', { current: 1, total })
-    : t('projects.counter.photo', { current: 1, total })
+    ? t('projects.counter.video', { current: index + 1, total })
+    : t('projects.counter.photo', { current: index + 1, total })
+  const prev = () => setIndex((i) => (i - 1 + total) % total)
+  const next = () => setIndex((i) => (i + 1) % total)
 
   return (
     <div className="relative rounded-lg overflow-hidden border border-border/50 bg-muted/20">
@@ -164,9 +167,27 @@ function MediaCarousel({ items, title }: { items: string[]; title: string }) {
         />
       )}
       {total > 1 ? (
-        <div className="absolute bottom-2 right-2 text-xs px-2 py-0.5 rounded bg-background/70 border border-border">
-          {counterText}
-        </div>
+        <>
+          <button
+            type="button"
+            onClick={prev}
+            className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-background/80 backdrop-blur border border-border px-3 py-1 text-sm"
+            aria-label="Previous"
+          >
+            ‹
+          </button>
+          <button
+            type="button"
+            onClick={next}
+            className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-background/80 backdrop-blur border border-border px-3 py-1 text-sm"
+            aria-label="Next"
+          >
+            ›
+          </button>
+          <div className="absolute bottom-2 right-2 text-xs px-2 py-0.5 rounded bg-background/80 border border-border">
+            {counterText}
+          </div>
+        </>
       ) : null}
     </div>
   )

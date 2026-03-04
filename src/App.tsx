@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next'
 
 import { Layout } from './components/Layout'
 import { LoadingScreen } from './components/LoadingScreen'
+import ErrorPage from './components/ErrorPage'
 
 const Home = lazy(() => import('./pages/Home'))
 const About = lazy(() => import('./pages/About'))
@@ -28,11 +29,13 @@ const router = createBrowserRouter([
   {
     path: '/fr',
     element: <Layout />,
+    errorElement: <ErrorPage />,
     children: childRoutes,
   },
   {
     path: '/en',
     element: <Layout />,
+    errorElement: <ErrorPage />,
     children: childRoutes,
   },
   {

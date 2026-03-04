@@ -238,6 +238,14 @@ export function Layout() {
               exit={{ opacity: 0, y: -24 }}
               className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border shadow-2xl pt-20 px-6 md:hidden"
             >
+              <button
+                type="button"
+                aria-label="Fermer le menu"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="absolute top-4 right-4 h-10 w-10 rounded-full border border-border flex items-center justify-center hover:bg-muted"
+              >
+                <X />
+              </button>
               <nav className="flex flex-col gap-4 text-xl font-medium pb-6">
                 {navigation.links.map((link: any, index: number) => (
                   <motion.div
