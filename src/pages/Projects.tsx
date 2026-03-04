@@ -14,7 +14,6 @@ export default function Projects() {
   const reduceMotion = useReducedMotion()
   const { items, allLabel, filterLabel, headline, description, eyebrow } =
     t('projects', { returnObjects: true }) as any
-  const videoDemos = undefined as any
   
   const filters = useMemo(() => {
     if (!items) return []
