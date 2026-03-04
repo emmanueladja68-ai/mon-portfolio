@@ -287,11 +287,9 @@ export function Layout() {
       </AnimatePresence>
 
       <main className="pt-24 md:pt-32 pb-16 px-6 max-w-7xl mx-auto min-h-[calc(100vh-200px)]">
-        <AnimatePresence mode="wait">
-          <PageTransition key={location.pathname}>
-            <Outlet />
-          </PageTransition>
-        </AnimatePresence>
+        <PageTransition>
+          <Outlet />
+        </PageTransition>
       </main>
 
       <footer className="border-t border-border bg-muted/30 py-16 px-6">
