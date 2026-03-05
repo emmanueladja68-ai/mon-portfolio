@@ -13,13 +13,12 @@ export function MotionReveal({ children, delay = 0, className }: MotionRevealPro
   return (
     <motion.div
       className={className}
-      initial={reduceMotion ? { opacity: 1 } : { opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
+      initial={reduceMotion ? { opacity: 1 } : { opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={
         reduceMotion
           ? { duration: 0 }
-          : { duration: 0.6, ease: [0.22, 1, 0.36, 1], delay }
+          : { duration: 0.35, ease: [0.22, 1, 0.36, 1], delay }
       }
     >
       {children}
