@@ -93,12 +93,9 @@ export function Layout() {
     const newLang = currentLang === 'fr' ? 'en' : 'fr'
     
     const currentPath = location.pathname
-    let newPath = currentPath.replace(`/${currentLang}`, `/${newLang}`)
-    
-    // Handle root or other edge cases if replace didn't work (e.g. if path doesn't start with lang)
-    if (!newPath.startsWith(`/${newLang}`)) {
-        newPath = `/${newLang}${currentPath.replace(/^\//, '')}`
-    }
+    // retire le préfixe de langue existant et reconstruit correctement
+    const stripped = currentPath.replace(/^\/(en|fr)/, '')
+    const newPath = `/${newLang}${stripped || ''}`
 
     i18n.changeLanguage(newLang)
     navigate(newPath)
