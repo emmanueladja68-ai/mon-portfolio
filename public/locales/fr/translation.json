@@ -98,7 +98,7 @@
   "about": {
     "eyebrow": "À propos",
     "headline": "Étudiant en Master Data Science et IA",
-    "bio": "Étudiant en Master Data Science & IA, à la recherche d’un stage de 4–6 mois dès juin 2026. Focus sur la modélisation, l’EDA et la BI.",
+    "bio": "Étudiant en Master Data Science et Intelligence Artificielle, spécialisé en analyse de données et machine learning. Je conçois des solutions basées sur la donnée pour répondre à des problématiques concrètes dans le sport analytics, l’innovation industrielle et les projets à impact.",
     "vision": "Appliquer la donnée pour créer des impacts métiers mesurables.",
     "valuesTitle": "Valeurs",
     "values": [
@@ -127,7 +127,7 @@
       }
     ],
     "languagesTitle": "Langues",
-    "languages": ["Français : Courant"],
+    "languages": ["Français : Natif", "Anglais : Intermédiaire"],
     "interestsTitle": "Centres d’intérêt",
     "interests": ["Cuisine", "Voyage", "Natation"]
   },
@@ -138,38 +138,38 @@
     "keyImpact": "Impact",
     "items": [
       {
-        "year": "2026",
-        "title": "Hackathon IA Agriculture (SIA)",
-        "company": "Salon International de l’Agriculture",
-        "summary": "Création d'un outil intelligent pour mesurer l'impact financier de l’élevage.",
-        "highlights": ["Évaluation financière automatisée", "Traitement de données élevage"]
+        "year": "Fév. 2026",
+        "title": "Développement IA – HINOSYS (Hackathon IA)",
+        "company": "Salon de l’Agriculture (SIA)",
+        "summary": "Aide à la décision : création d'un outil intelligent pour chiffrer l'impact financier des changements de systèmes d'élevage.",
+        "highlights": ["LLMs et analyse de données", "Présentation à La Ferme Digitale"]
       },
       {
-        "year": "2025",
-        "title": "Hackathon Cyber",
-        "company": "Ministère de la Défense",
-        "summary": "Modèle ML de détection d'incidents informatiques en temps réel.",
-        "highlights": ["Détection temps réel", "Modélisation ML"]
+        "year": "Nov.–Déc. 2025",
+        "title": "Cybersécurité – Hackathon IA",
+        "company": "Ministère de la Défense (CND)",
+        "summary": "Détection proactive : modèle de Machine Learning pour identifier et classifier les incidents informatiques en temps réel.",
+        "highlights": ["Feature engineering sur volumes massifs", "Synthèse et recommandations au jury"]
       },
       {
-        "year": "2025",
-        "title": "Sport Analytics & Dashboard",
-        "company": "Projet académique",
-        "summary": "Analyse exploratoire et dashboard interactif pour suivi de performance.",
-        "highlights": ["EDA", "Streamlit"]
+        "year": "Fév. 2026",
+        "title": "Sport Analytics – Dashboarding & App",
+        "company": "Kaggle",
+        "summary": "Impact terrain : analyse statistique de l'avantage à domicile vs terrain neutre (EDA).",
+        "highlights": ["Interface Streamlit", "Comparaison équipes en un clic"]
       },
       {
-        "year": "2025",
-        "title": "Business Intelligence PME",
+        "year": "Janv. 2026",
+        "title": "Business Intelligence – Analyse PME",
         "company": "Projet",
-        "summary": "Tableaux de bord Power BI pour pilotage commercial.",
-        "highlights": ["Indicateurs clés", "Reporting"]
+        "summary": "Tableaux de bord Power BI pour transformer les données de vente en KPI actionnables.",
+        "highlights": ["Pilotage commercial", "Reporting"]
       },
       {
-        "year": "2024",
-        "title": "Football Match Predictor",
+        "year": "Janv. 2026",
+        "title": "Data Science – Football Match Predictor",
         "company": "Projet",
-        "summary": "Modèle de classification multi-classes (Victoire/Nul/Défaite).",
+        "summary": "ETL multi-source CSV, variables personnalisées, visualisation des corrélations, classification Victoire/Nul/Défaite.",
         "highlights": ["Feature engineering", "Évaluation multi-classes"]
       },
       {
@@ -187,8 +187,9 @@
     "description": "Mes outils au quotidien.",
     "categories": [
       { "name": "Stack", "items": ["Python", "Pandas", "NumPy", "scikit-learn", "SQL", "MySQL"] },
-      { "name": "Data Science", "items": ["Feature Engineering", "EDA", "Statistiques", "Classification"] },
-      { "name": "BI & Web", "items": ["Power BI", "Tableau", "Streamlit", "Matplotlib"] }
+      { "name": "Data Science", "items": ["Modélisation multi-classes", "Feature Engineering", "EDA", "Statistiques"] },
+      { "name": "BI & Web", "items": ["Power BI", "Tableau", "Streamlit", "Matplotlib", "Seaborn"] },
+      { "name": "Systèmes & Virtualisation", "items": ["VirtualBox", "Kali Linux", "Windows 11"] }
     ]
   },
   "projects": {

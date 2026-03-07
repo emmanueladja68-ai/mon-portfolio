@@ -98,7 +98,7 @@
   "about": {
     "eyebrow": "About",
     "headline": "Master's Student in Data Science and AI",
-    "bio": "Master's student in Data Science & AI, seeking a 4–6 month internship from June 2026. Focus on modeling, EDA and BI.",
+    "bio": "Master’s student in Data Science & Artificial Intelligence, specialized in data analysis and machine learning. I design data‑driven solutions for real‑world problems across sports analytics, industrial innovation and impact projects.",
     "vision": "Apply data to create measurable business impact.",
     "valuesTitle": "Values",
     "values": [
@@ -127,7 +127,7 @@
       }
     ],
     "languagesTitle": "Languages",
-    "languages": ["French: Fluent"],
+    "languages": ["French: Native", "English: Intermediate"],
     "interestsTitle": "Interests",
     "interests": ["Cooking", "Travel", "Swimming"]
   },
@@ -138,38 +138,38 @@
     "keyImpact": "Impact",
     "items": [
       {
-        "year": "2026",
-        "title": "AI Agriculture Hackathon (SIA)",
-        "company": "Salon International de l’Agriculture",
-        "summary": "Built an intelligent tool to measure the financial impact of livestock.",
-        "highlights": ["Automated financial evaluation", "Livestock data processing"]
+        "year": "Feb. 2026",
+        "title": "AI Development – HINOSYS (AI Hackathon)",
+        "company": "Salon de l’Agriculture (SIA)",
+        "summary": "Decision support: intelligent tool to estimate the financial impact of changes in livestock systems.",
+        "highlights": ["LLMs and data analysis", "Presentation at La Ferme Digitale"]
       },
       {
-        "year": "2025",
-        "title": "Cyber Hackathon",
-        "company": "Ministry of Defence",
-        "summary": "Real‑time incident detection using ML models.",
-        "highlights": ["Real‑time detection", "ML modeling"]
+        "year": "Nov.–Dec. 2025",
+        "title": "Cybersecurity – AI Hackathon",
+        "company": "Ministry of Defence (CND)",
+        "summary": "Proactive detection: ML model to identify and classify IT incidents in real time.",
+        "highlights": ["Feature engineering on massive data", "Performance synthesis and recommendations"]
       },
       {
-        "year": "2025",
-        "title": "Sport Analytics & Dashboard",
-        "company": "Academic project",
-        "summary": "Exploratory analysis and interactive dashboard for performance tracking.",
-        "highlights": ["EDA", "Streamlit"]
+        "year": "Feb. 2026",
+        "title": "Sport Analytics – Dashboarding & App",
+        "company": "Kaggle",
+        "summary": "Field impact: statistical analysis of home advantage vs neutral ground (EDA).",
+        "highlights": ["Streamlit interface", "Compare teams in one click"]
       },
       {
-        "year": "2025",
-        "title": "SME Business Intelligence",
+        "year": "Jan. 2026",
+        "title": "Business Intelligence – SME Analysis",
         "company": "Project",
-        "summary": "Power BI dashboards for sales and operations.",
-        "highlights": ["Key indicators", "Reporting"]
+        "summary": "Power BI dashboards turning sales data into actionable KPIs.",
+        "highlights": ["Commercial steering", "Reporting"]
       },
       {
-        "year": "2024",
-        "title": "Football Match Predictor",
+        "year": "Jan. 2026",
+        "title": "Data Science – Football Match Predictor",
         "company": "Project",
-        "summary": "Multi‑class classification model (Win/Draw/Loss).",
+        "summary": "Multi‑source CSV ETL, custom variables, correlation visualization, classification Win/Draw/Loss.",
         "highlights": ["Feature engineering", "Multi‑class evaluation"]
       },
       {
@@ -187,8 +187,9 @@
     "description": "My daily tools.",
     "categories": [
       { "name": "Stack", "items": ["Python", "Pandas", "NumPy", "scikit-learn", "SQL", "MySQL"] },
-      { "name": "Data Science", "items": ["Feature Engineering", "EDA", "Statistics", "Classification"] },
-      { "name": "BI & Web", "items": ["Power BI", "Tableau", "Streamlit", "Matplotlib"] }
+      { "name": "Data Science", "items": ["Multi‑class modeling", "Feature Engineering", "EDA", "Statistics"] },
+      { "name": "BI & Web", "items": ["Power BI", "Tableau", "Streamlit", "Matplotlib", "Seaborn"] },
+      { "name": "Systems & Virtualization", "items": ["VirtualBox", "Kali Linux", "Windows 11"] }
     ]
   },
   "projects": {
