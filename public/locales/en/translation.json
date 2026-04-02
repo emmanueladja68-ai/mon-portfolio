@@ -31,8 +31,8 @@
       { "label": "Vision", "href": "#vision" }
     ],
     "intro": {
-      "badge": "ADJA Emmanuel — Master DS & AI",
-      "text": "Master’s student in Data Science & AI, I structure my project around concrete pillars to maximize data impact."
+      "badge": "Emmanuel Adja Amangoua — Master DS & AI",
+      "text": "Master's student in Data Science & AI, I develop decision support solutions via Machine Learning. Selected for Defense (CND) and Agriculture (SIA) Hackathons, I master complex engineering (SMOTE) and interactive interface deployment (Streamlit). My goal: transform raw data into a strategic innovation lever."
     },
     "pillars": {
       "eyebrow": "Target Sectors",
@@ -50,18 +50,18 @@
       "timelineTitle": "Path",
       "skillsTitle": "Skills",
       "timeline": [
-        "AI Hackathon (SIA 2026) — LLMs tool for impact estimation",
-        "Cyber Hackathon (Ministry of Defence 2025) — real‑time detection",
-        "Football Match Predictor — multi‑class classification",
-        "Sport Analytics Dashboard — Streamlit visualization",
-        "DMS Platform — Full‑stack development (PHP/MySQL)"
+        "AI Data Scientist — HINOSYS Hackathon (SIA 2026)",
+        "Data Scientist — Industrial Predictive Maintenance (Kaggle)",
+        "Data Engineer & ML — Defense Hackathon (CND)",
+        "Data Scientist — Football Match Predictor",
+        "Business Intelligence — SME Performance Analysis"
       ],
-      "skills": ["Python", "Pandas", "scikit‑learn", "SQL", "Power BI", "Streamlit"]
+      "skills": ["Python", "Pandas", "scikit‑learn", "XGBoost", "LLMs", "Streamlit", "Power BI", "SQL", "MySQL", "Git", "Docker", "Linux"]
     },
     "pitch": {
       "eyebrow": "Positioning",
       "title": "My Pitch",
-      "text": "I turn heterogeneous data into actionable decisions. My goal: deliver clear, measurable tools that drive business impact."
+      "text": "I transform raw data into a strategic innovation lever through mastery of complex engineering and MLOps deployment."
     },
     "vision": {
       "note": "Data Science is universal: it adapts to the challenges of Sports, Automotive and Humanitarian sectors to create real impact."
@@ -73,9 +73,9 @@
       "eyebrow": "Data Science Portfolio",
       "name": "Emmanuel ADJA AMANGOUA",
       "title": "Master's Student in Data Science and AI",
-      "subtitle": "I turn data into actionable decisions.",
-      "availability": "Seeking 4–6 month internship from June 2026",
-      "typingPhrases": ["Master's in Data Science", "AI Expert", "BI Analyst"],
+      "subtitle": "Seeking a 4–6 month internship from June 2026. I turn raw data into a strategic innovation lever.",
+      "availability": "Seeking internship / apprenticeship",
+      "typingPhrases": ["Master's in Data Science", "AI Expert", "Data Scientist", "ML Engineer"],
       "primaryCta": { "label": "View my projects", "href": "/projects" },
       "secondaryCta": { "label": "Download CV", "href": "/cv.pdf" }
     },
@@ -84,48 +84,50 @@
       "title": "My Services",
       "description": "Analysis and intelligence.",
       "items": [
-        { "title": "Data Analysis", "description": "Massive data exploration." },
-        { "title": "Machine Learning", "description": "Predictive modeling." }
+        { "title": "Data Science & ML", "description": "Classification, Regression, Clustering, Time series." },
+        { "title": "MLOps & Deployment", "description": "Streamlit interfaces, GridSearchCV, Joblib." },
+        { "title": "Business Intelligence", "description": "Power BI & Tableau visualization." }
       ]
     },
     "trust": {
       "eyebrow": "Assets",
-      "title": "Trust",
-      "description": "Measurable results.",
-      "items": ["Precision", "Rigor", "Innovation"]
+      "title": "Why trust me?",
+      "description": "Sharp skills for concrete results.",
+      "items": ["Complex Engineering (SMOTE)", "LLM Mastery", "Data Storytelling"]
     }
   },
   "about": {
     "eyebrow": "About",
     "headline": "Master's Student in Data Science and AI",
-    "bio": "Master’s student in Data Science & Artificial Intelligence, specialized in data analysis and machine learning. I design data‑driven solutions for real‑world problems across sports analytics, industrial innovation and impact projects.",
-    "vision": "Apply data to create measurable business impact.",
+    "bio": "Master's student in Data Science and Artificial Intelligence, specialized in data analysis and machine learning, I design data-driven solutions for real-world problems in fields such as sports analytics, industrial innovation, and impact projects.",
+    "vision": "Transform raw data into a strategic innovation lever.",
     "valuesTitle": "Values",
     "values": [
-      { "title": "Innovation", "description": "Using the latest AI models." },
-      { "title": "Rigor", "description": "Accurate statistical analysis." }
+      { "title": "Innovation", "description": "Leveraging the power of Large Language Models (LLMs)." },
+      { "title": "Impact", "description": "Creating actionable decision support tools." }
     ],
-    "educationTitle": "Education",
     "education": [
       {
         "year": "2025–2026",
-        "title": "Master in Data Science & AI",
-        "organization": "AI2 – Paris",
-        "location": "Paris",
+        "title": "Master in Data Science & AI (A12)",
+        "organization": "Paris",
         "details": "In progress",
-        "highlights": ["Deep Learning", "Big Data"]
+        "highlights": ["Advanced AI", "Machine Learning", "Big Data"]
       },
       {
         "year": "2022–2025",
         "title": "Bachelor in Computer Science – MIAGE",
-        "organization": "Université d’Abidjan",
-        "highlights": ["Software Development", "Databases"]
+        "organization": "Abidjan University Institute",
+        "highlights": ["Full-Stack Development", "MySQL Databases", "UML"]
       },
       {
         "year": "2021–2022",
-        "title": "Scientific Baccalaureate – Series D"
+        "title": "Scientific Baccalaureate – D Series",
+        "organization": "High School",
+        "highlights": ["Scientific Series"]
       }
     ],
+    "educationTitle": "Education",
     "languagesTitle": "Languages",
     "languages": ["French: Native", "English: Intermediate"],
     "interestsTitle": "Interests",
@@ -138,46 +140,46 @@
     "keyImpact": "Impact",
     "items": [
       {
+        "year": "March 2026",
+        "title": "Data Scientist — Industrial Predictive Maintenance",
+        "company": "Kaggle AI4I",
+        "summary": "Engineering complex physical variables (thermal differential, power) to isolate weak failure signals. Imbalance management via SMOTE (3.4% failures).",
+        "highlights": ["Maximization via GridSearchCV (AUC-ROC 0.98)", "Real-time Streamlit interface deployment"]
+      },
+      {
         "year": "Feb. 2026",
-        "title": "AI Development – HINOSYS (AI Hackathon)",
+        "title": "AI Data Scientist — HINOSYS Hackathon (SIA 2026)",
         "company": "Salon de l’Agriculture (SIA)",
-        "summary": "Decision support: intelligent tool to estimate the financial impact of changes in livestock systems.",
-        "highlights": ["LLMs and data analysis", "Presentation at La Ferme Digitale"]
+        "summary": "LLM Architecture: Designing a financial Decision Support Tool (DST) to estimate the impact of livestock system changes.",
+        "highlights": ["Presentation on the 'La Ferme Digitale' stage", "Simplifying agricultural management via LLMs"]
       },
       {
         "year": "Nov.–Dec. 2025",
-        "title": "Cybersecurity – AI Hackathon",
-        "company": "Ministry of Defence (CND)",
-        "summary": "Proactive detection: ML model to identify and classify IT incidents in real time.",
-        "highlights": ["Feature engineering on massive data", "Performance synthesis and recommendations"]
-      },
-      {
-        "year": "Feb. 2026",
-        "title": "Sport Analytics – Dashboarding & App",
-        "company": "Kaggle",
-        "summary": "Field impact: statistical analysis of home advantage vs neutral ground (EDA).",
-        "highlights": ["Streamlit interface", "Compare teams in one click"]
+        "title": "Data Engineer & ML — Defense Hackathon (CND)",
+        "company": "Ministry of Defense (CND)",
+        "summary": "Proactive detection: Developing a real-time cyber incident classification system via Random Forest and XGBoost. Orchestrating massive and heterogeneous flows.",
+        "highlights": ["Real-time cyber incident classification", "Feature engineering on massive volumes"]
       },
       {
         "year": "Jan. 2026",
-        "title": "Business Intelligence – SME Analysis",
-        "company": "Project",
-        "summary": "Power BI dashboards turning sales data into actionable KPIs.",
-        "highlights": ["Commercial steering", "Reporting"]
+        "title": "Data Scientist — Football Match Predictor",
+        "company": "Personal Project",
+        "summary": "Multi-source CSV ETL pipeline. Custom variable creation and correlation visualization.",
+        "highlights": ["Multi-class classification (Win/Draw/Loss)", "Advanced statistical analysis"]
       },
       {
         "year": "Jan. 2026",
-        "title": "Data Science – Football Match Predictor",
-        "company": "Project",
-        "summary": "Multi‑source CSV ETL, custom variables, correlation visualization, classification Win/Draw/Loss.",
-        "highlights": ["Feature engineering", "Multi‑class evaluation"]
+        "title": "Business Intelligence — SME Performance Analysis",
+        "company": "Personal Project",
+        "summary": "Designing Power BI dashboards to transform sales flows into actionable key performance indicators (KPIs).",
+        "highlights": ["Strategic Data Visualization", "Commercial steering"]
       },
       {
-        "year": "2024",
-        "title": "DMS Platform",
-        "company": "Project",
-        "summary": "Full‑stack development for a document management system.",
-        "highlights": ["PHP", "MySQL"]
+        "year": "Jan.–June 2025",
+        "title": "Full-Stack Developer — DMS Platform (L3)",
+        "company": "Degree Project",
+        "summary": "Full information system architecture & modeling via UML (StarUML). Developing a secure web DMS application (PHP, SQL, HTML/CSS).",
+        "highlights": ["Full-stack PHP/MySQL", "Database management and administration"]
       }
     ]
   },
@@ -186,10 +188,10 @@
     "headline": "Technical Stack",
     "description": "My daily tools.",
     "categories": [
-      { "name": "Stack", "items": ["Python", "Pandas", "NumPy", "scikit-learn", "SQL", "MySQL"] },
-      { "name": "Data Science", "items": ["Multi‑class modeling", "Feature Engineering", "EDA", "Statistics"] },
-      { "name": "BI & Web", "items": ["Power BI", "Tableau", "Streamlit", "Matplotlib", "Seaborn"] },
-      { "name": "Systems & Virtualization", "items": ["VirtualBox", "Kali Linux", "Windows 11"] }
+      { "name": "Data Science & ML", "items": ["Classification", "Regression", "Clustering", "Time series", "Random Forest", "XGBoost", "SVM", "Scikit-learn"] },
+      { "name": "Expertise & Analysis", "items": ["Feature Engineering", "SMOTE", "LLMs", "MLOps", "EDA", "GridSearchCV"] },
+      { "name": "Programming & Tools", "items": ["Python (Pandas, NumPy)", "SQL", "PHP", "Streamlit", "Power BI", "Tableau", "Matplotlib", "Seaborn"] },
+      { "name": "Systems & DevOps", "items": ["MySQL", "PostgreSQL", "Git", "Linux (Kali)", "Docker", "VirtualBox", "VS Code"] }
     ]
   },
   "projects": {
@@ -203,80 +205,80 @@
       "photo": "Photo {{current}} / {{total}}",
       "video": "Video {{current}} / {{total}}"
     },
-    "videoDemos": {
-      "title": "Watch project video demos",
-      "sportDashboard": {
-        "title": "Sport Dashboard",
-        "items": ["/sport_dashboard/demo1.mp4", "/sport_dashboard/demo2.mp4", "/sport_dashboard/demo3.mp4"]
-      }
-    },
     "items": [
       {
+        "name": "Supply Chain & Logistics Analytics",
+        "description": "Interactive dashboard for global flow steering and delivery delay analysis.",
+        "impact": "Identification of root causes for delays by region and customer segment.",
+        "tech": ["BI", "Logistics"],
+        "stack": ["Power BI", "DAX", "Data Viz"],
+        "links": { "project": "/performance_logistique/pme-1.png.png", "code": "https://github.com/emmanueladja" },
+        "gallery": [
+          "/performance_logistique/pme-1.png.png", "/performance_logistique/pme-2.png.png",
+          "/performance_logistique/pme-3.png.png", "/performance_logistique/pme-4.png.png"
+        ]
+      },
+      {
+        "name": "Industrial Predictive Maintenance",
+        "description": "Modeling industrial failures with SMOTE imbalance management and GridSearchCV optimization.",
+        "impact": "Isolating weak failure signals with an AUC-ROC of 0.98.",
+        "tech": ["ML", "MLOps"],
+        "stack": ["Python", "SMOTE", "Streamlit", "GridSearchCV"],
+        "links": { "project": "/prediction_de_panne/pn_1.png", "code": "https://github.com/emmanueladja" },
+        "gallery": [
+          "/prediction_de_panne/pn_1.png", "/prediction_de_panne/pn_2.png", "/prediction_de_panne/pn_3.png",
+          "/prediction_de_panne/pn_4.png", "/prediction_de_panne/pn_5.png", "/prediction_de_panne/pn_6.png",
+          "/prediction_de_panne/pn_7.png", "/prediction_de_panne/pn_8.png", "/prediction_de_panne/pn_9.png",
+          "/prediction_de_panne/pn_10.png", "/prediction_de_panne/pn_11.png"
+        ]
+      },
+      {
         "name": "AI Agriculture Hackathon (SIA 2026)",
-        "description": "Built an intelligent tool for livestock financial impact.",
-        "impact": "Automated evaluation of financial impact for livestock.",
-        "tech": ["AI", "ML"],
-        "stack": ["Python", "Pandas", "scikit-learn"],
+        "description": "Financial Decision Support Tool via LLM to estimate the impact of livestock system changes.",
+        "impact": "Financial optimization via generative AI and data storytelling.",
+        "tech": ["IA", "LLM"],
+        "stack": ["Python", "LLMs", "Pandas"],
         "links": { "project": "/hackaton/demo1.mp4", "code": "https://github.com/emmanueladja" },
         "gallery": ["/hackaton/demo1.mp4", "/hackaton/fc-1.png", "/hackaton/fc-2.png", "/hackaton/fc-3.png"]
       },
       {
-        "name": "Cyber Hackathon (Ministry of Defence 2025)",
-        "description": "Real‑time incident detection with ML.",
-        "impact": "Improved responsiveness to incidents.",
+        "name": "Cyber Hackathon (Ministry of Defense 2025)",
+        "description": "Real-time cyber incident classification via Random Forest and XGBoost on massive flows.",
+        "impact": "Proactive threat detection and strategic recommendations.",
         "tech": ["ML", "Cyber"],
-        "stack": ["Python", "scikit-learn"],
+        "stack": ["Python", "Random Forest", "XGBoost"],
         "links": { "project": "https://www.linkedin.com/in/amangoua-n-guetta-emmanuel-adja-955ba3256", "code": "https://github.com/emmanueladja" }
       },
       {
-        "name": "Sport Analytics & Dashboard",
-        "description": "Performance analysis with EDA and Streamlit.",
-        "impact": "Tracking and visualizing sports performance.",
-        "tech": ["BI"],
-        "stack": ["Streamlit", "Pandas", "Matplotlib"],
-        "links": { "project": "/sport_dashboard/demo1.mp4", "code": "https://github.com/emmanueladja" },
-        "gallery": ["/sport_dashboard/demo1.mp4", "/sport_dashboard/demo2.mp4", "/sport_dashboard/demo3.mp4"]
+        "name": "Football Match Predictor",
+        "description": "Multi-class classification model for Win/Draw/Loss with multi-source ETL pipeline.",
+        "impact": "Robust predictions based on advanced statistics and correlations.",
+        "tech": ["ML"],
+        "stack": ["Python", "scikit-learn", "Pandas"],
+        "links": { "project": "/football_predictor/fc-1.png", "code": "https://github.com/emmanueladja" },
+        "gallery": [
+          "/football_predictor/fc-1.png", "/football_predictor/fc-2.png", "/football_predictor/fc-3.png",
+          "/football_predictor/fc-4.png", "/football_predictor/fc-5.png", "/football_predictor/fc-6.png",
+          "/football_predictor/fc-7.png", "/football_predictor/fc-8.png", "/football_predictor/fc-9.png",
+          "/football_predictor/fc-10.png", "/football_predictor/fc-11.png", "/football_predictor/fc-12.png",
+          "/football_predictor/fc-13.png", "/football_predictor/fc-14.png", "/football_predictor/fc-15.png"
+        ]
       },
       {
-        "name": "SME Business Intelligence",
-        "description": "Power BI dashboards for business monitoring.",
-        "impact": "Key indicators for operational decisions.",
+        "name": "Business Intelligence SME",
+        "description": "Interactive Power BI dashboards for commercial steering and actionable KPIs.",
+        "impact": "Transformation of sales flows into strategic indicators.",
         "tech": ["BI"],
         "stack": ["Power BI"],
         "links": { "project": "/bi_pme/pme-1.png", "code": "https://github.com/emmanueladja" },
         "gallery": ["/bi_pme/pme-1.png", "/bi_pme/pme-2.png", "/bi_pme/pme-3.png", "/bi_pme/pme-4.png", "/bi_pme/pme-5.png"]
       },
       {
-        "name": "Football Match Predictor",
-        "description": "Multi‑class classification to predict Win/Draw/Loss.",
-        "impact": "Actionable predictions for match analysis.",
-        "tech": ["ML"],
-        "stack": ["Python", "scikit-learn", "Pandas"],
-        "links": { "project": "/football_predictor/fc-1.png", "code": "https://github.com/emmanueladja" },
-        "gallery": [
-          "/football_predictor/fc-1.png",
-          "/football_predictor/fc-2.png",
-          "/football_predictor/fc-3.png",
-          "/football_predictor/fc-4.png",
-          "/football_predictor/fc-5.png",
-          "/football_predictor/fc-6.png",
-          "/football_predictor/fc-7.png",
-          "/football_predictor/fc-8.png",
-          "/football_predictor/fc-9.png",
-          "/football_predictor/fc-10.png",
-          "/football_predictor/fc-11.png",
-          "/football_predictor/fc-12.png",
-          "/football_predictor/fc-13.png",
-          "/football_predictor/fc-14.png",
-          "/football_predictor/fc-15.png"
-        ]
-      },
-      {
         "name": "DMS Platform",
-        "description": "Full‑stack development (PHP, MySQL).",
-        "impact": "Centralized and secure document management.",
+        "description": "Document Management System (PHP, MySQL) with StarUML modeling.",
+        "impact": "Secure architecture for corporate document management.",
         "tech": ["Web"],
-        "stack": ["PHP", "MySQL"],
+        "stack": ["PHP", "MySQL", "UML"],
         "links": { "project": "https://www.linkedin.com/in/amangoua-n-guetta-emmanuel-adja-955ba3256", "code": "https://github.com/emmanueladja" }
       }
     ]
@@ -292,7 +294,7 @@
       "email": "emmanueladja68@gmail.com",
       "phone": "+33 7 46 57 50 64",
       "location": "Île-de-France",
-      "availability": "Available for a 4–6 month internship from June 2026",
+      "availability": "Seeking an internship / apprenticeship",
       "github": "https://github.com/emmanueladja",
       "linkedin": "https://www.linkedin.com/in/amangoua-n-guetta-emmanuel-adja-955ba3256"
     }

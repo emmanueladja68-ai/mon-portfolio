@@ -56,7 +56,7 @@
         "Data Scientist — Football Match Predictor",
         "Business Intelligence — Analyse de Performance PME"
       ],
-      "skills": ["Python", "Pandas", "scikit‑learn", "XGBoost", "LLMs", "Streamlit"]
+      "skills": ["Python", "Pandas", "scikit‑learn", "XGBoost", "LLMs", "Streamlit", "Power BI", "SQL", "MySQL", "Git", "Docker", "Linux"]
     },
     "pitch": {
       "eyebrow": "Positionnement",
@@ -64,7 +64,7 @@
       "text": "Je transforme la donnée brute en levier d’innovation stratégique grâce à une maîtrise de l'ingénierie complexe et du déploiement MLOps."
     },
     "vision": {
-      "note": "La Data Science est le catalyseur de la transformation stratégique moderne."
+      "note": "La Data Science est universelle : elle s’adapte aux défis du Sport, de l’Automobile et de l’Humanitaire pour créer un impact réel."
     },
     "backToTop": "Haut de section"
   },
@@ -99,7 +99,7 @@
   "about": {
     "eyebrow": "À propos",
     "headline": "Étudiant en Master Data Science et IA",
-    "bio": "Étudiant en Master Data Science & IA, je développe des solutions d’aide à la décision via le Machine Learning. Sélectionné aux Hackathons Défense (CND) et Agriculture (SIA), je maîtrise l'ingénierie complexe (SMOTE) et le déploiement d’interfaces interactives (Streamlit). Mon objectif : transformer la donnée brute en levier d’innovation stratégique.",
+    "bio": "Étudiant en Master Data Science et Intelligence Artificielle, spécialisé en analyse de données et machine learning, je conçois des solutions basées sur la donnée pour répondre à des problématiques concrètes dans des domaines variés comme le sport analytics, l’innovation industrielle et les projets à impact.",
     "vision": "Transformer la donnée brute en levier d’innovation stratégique.",
     "valuesTitle": "Valeurs",
     "values": [
@@ -112,13 +112,13 @@
         "title": "Master Data Science et Intelligence Artificielle (A12)",
         "organization": "Paris",
         "details": "En cours",
-        "highlights": ["IA Avancée", "Machine Learning"]
+        "highlights": ["IA Avancée", "Machine Learning", "Big Data"]
       },
       {
         "year": "2022–2025",
         "title": "Licence Informatique - MIAGE",
         "organization": "Institut Universitaire d'Abidjan",
-        "highlights": ["Développement Full-Stack", "Bases de données MySQL"]
+        "highlights": ["Développement Full-Stack", "Bases de données MySQL", "UML"]
       },
       {
         "year": "2021–2022",
@@ -143,43 +143,43 @@
         "year": "Mars 2026",
         "title": "Data Scientist — Maintenance Prédictive Industrielle",
         "company": "Kaggle AI4I",
-        "summary": "Modélisation d'indicateurs physiques complexes pour isoler les signaux faibles de défaillance. Gestion du déséquilibre via SMOTE (3,4% de pannes).",
-        "highlights": ["AUC-ROC 0.98 via GridSearchCV", "Interface interactive Streamlit temps réel"]
+        "summary": "Ingénierie de variables physiques complexes (différentiel thermique, puissance) pour isoler les signaux faibles de défaillance. Gestion du déséquilibre via SMOTE (3,4% de pannes).",
+        "highlights": ["Maximisation via GridSearchCV (AUC-ROC 0.98)", "Déploiement interface Streamlit temps réel"]
       },
       {
         "year": "Février 2026",
-        "title": "Data Scientist IA — Hackathon HINOSYS",
-        "company": "Salon de l’Agriculture (SIA 2026)",
-        "summary": "Architecture LLM : Conception d'un Outil d'Aide à la Décision (OAD) financier pour le secteur agricole.",
-        "highlights": ["Démonstration sur la scène de 'La Ferme Digitale'", "Expertise agrotechnologique"]
+        "title": "Data Scientist IA — Hackathon HINOSYS (SIA 2026)",
+        "company": "Salon de l’Agriculture (SIA)",
+        "summary": "Architecture LLM : Conception d'un Outil d'Aide à la Décision (OAD) financier pour chiffrer l'impact des changements de systèmes d'élevage.",
+        "highlights": ["Présentation sur la scène de 'La Ferme Digitale'", "Simplification de la gestion agricole via LLMs"]
       },
       {
         "year": "Nov.–Déc. 2025",
-        "title": "Data Engineer & ML — Hackathon Défense",
+        "title": "Data Engineer & ML — Hackathon Ministère de la Défense (CND)",
         "company": "Ministère de la Défense (CND)",
-        "summary": "Détection proactive d'incidents cyber en temps réel via Random Forest et XGBoost. Orchestration de flux de données massifs.",
-        "highlights": ["Classification d'incidents en temps réel", "Feature engineering complexe"]
+        "summary": "Détection proactive d'incidents cyber en temps réel via Random Forest et XGBoost. Orchestration de flux massifs et hétérogènes.",
+        "highlights": ["Classification d'incidents cyber en temps réel", "Feature engineering sur volumes massifs"]
       },
       {
         "year": "Janvier 2026",
         "title": "Data Scientist — Football Match Predictor",
         "company": "Projet Personnel",
-        "summary": "Pipeline ETL multi-sources et entraînement de modèles multi-classes pour prédire l'issue des rencontres sportives.",
-        "highlights": ["Structuration de flux multi-sources", "Classification Win/Draw/Loss"]
+        "summary": "Pipeline ETL multi-sources CSV. Création de variables personnalisées et visualisation des corrélations.",
+        "highlights": ["Classification multi-classes (Win/Draw/Loss)", "Analyse statistique avancée"]
       },
       {
         "year": "Janvier 2026",
         "title": "Business Intelligence — Analyse de Performance PME",
         "company": "Projet Personnel",
-        "summary": "Conception de tableaux de bord Power BI pour transformer les flux de ventes en indicateurs clés (KPI) actionnables.",
-        "highlights": ["Data Visualization", "Indicateurs stratégiques"]
+        "summary": "Conception de tableaux de bord Power BI pour transformer les flux de ventes en indicateurs clés de performance (KPI) actionnables.",
+        "highlights": ["Data Visualization stratégique", "Pilotage commercial"]
       },
       {
         "year": "Janv. – Juin 2025",
-        "title": "Développeur Full-Stack — Plateforme GED",
+        "title": "Développeur Full-Stack — Plateforme GED (L3)",
         "company": "Projet de Licence",
-        "summary": "Architecture & Modélisation UML d'un système d'information complet. Implémentation web sécurisée (PHP, SQL, HTML/CSS).",
-        "highlights": ["Modélisation StarUML", "Administration MySQL"]
+        "summary": "Architecture & Modélisation UML (StarUML). Développement d'une application web sécurisée (PHP, SQL, HTML/CSS).",
+        "highlights": ["Full-stack PHP/MySQL", "Gestion et administration de bases de données"]
       }
     ]
   },
@@ -190,8 +190,8 @@
     "categories": [
       { "name": "Data Science & ML", "items": ["Classification", "Régression", "Clustering", "Séries temporelles", "Random Forest", "XGBoost", "SVM", "Scikit-learn"] },
       { "name": "Expertise & Analyse", "items": ["Feature Engineering", "SMOTE", "LLMs", "MLOps", "EDA", "GridSearchCV"] },
-      { "name": "Programmation & Outils", "items": ["Python (Pandas, NumPy)", "SQL", "PHP", "Streamlit", "Power BI", "Tableau"] },
-      { "name": "Systèmes & DevOps", "items": ["MySQL", "PostgreSQL", "Git", "Linux (Kali)", "Docker", "VS Code"] }
+      { "name": "Programmation & Outils", "items": ["Python (Pandas, NumPy)", "SQL", "PHP", "Streamlit", "Power BI", "Tableau", "Matplotlib", "Seaborn"] },
+      { "name": "Systèmes & DevOps", "items": ["MySQL", "PostgreSQL", "Git", "Linux (Kali)", "Docker", "VirtualBox", "VS Code"] }
     ]
   },
   "projects": {
@@ -205,17 +205,22 @@
       "photo": "Photo {{current}} / {{total}}",
       "video": "Vidéo {{current}} / {{total}}"
     },
-    "videoDemos": {
-      "title": "Voir les démos des projets en vidéo",
-      "sportDashboard": {
-        "title": "Sport Dashboard",
-        "items": ["/sport_dashboard/demo1.mp4", "/sport_dashboard/demo2.mp4", "/sport_dashboard/demo3.mp4"]
-      }
-    },
     "items": [
       {
+        "name": "Analytics Supply Chain & Logistique",
+        "description": "Dashboard interactif pour le pilotage des flux mondiaux et l'analyse des retards de livraison.",
+        "impact": "Identification des causes racines de retards par région et segment client.",
+        "tech": ["BI", "Logistique"],
+        "stack": ["Power BI", "DAX", "Data Viz"],
+        "links": { "project": "/performance_logistique/pme-1.png.png", "code": "https://github.com/emmanueladja" },
+        "gallery": [
+          "/performance_logistique/pme-1.png.png", "/performance_logistique/pme-2.png.png",
+          "/performance_logistique/pme-3.png.png", "/performance_logistique/pme-4.png.png"
+        ]
+      },
+      {
         "name": "Maintenance Prédictive Industrielle",
-        "description": "Modélisation de défaillances industrielles avec gestion du déséquilibre SMOTE.",
+        "description": "Modélisation de défaillances industrielles avec gestion du déséquilibre SMOTE et optimisation GridSearchCV.",
         "impact": "Isoler les signaux faibles de panne avec une AUC-ROC de 0.98.",
         "tech": ["ML", "MLOps"],
         "stack": ["Python", "SMOTE", "Streamlit", "GridSearchCV"],
@@ -229,8 +234,8 @@
       },
       {
         "name": "Hackathon IA Agriculture (SIA 2026)",
-        "description": "Outil d'Aide à la Décision financier via LLM pour le secteur agricole.",
-        "impact": "Optimisation financière via l'IA générative.",
+        "description": "Outil d'Aide à la Décision financier via LLM pour chiffrer l'impact des changements de systèmes d'élevage.",
+        "impact": "Optimisation financière via l'IA générative et storytelling data.",
         "tech": ["IA", "LLM"],
         "stack": ["Python", "LLMs", "Pandas"],
         "links": { "project": "/hackaton/demo1.mp4", "code": "https://github.com/emmanueladja" },
@@ -238,16 +243,16 @@
       },
       {
         "name": "Hackathon Cyber (Ministère de la Défense 2025)",
-        "description": "Classification d'incidents cyber en temps réel via Random Forest et XGBoost.",
-        "impact": "Détection proactive des menaces sur flux massifs.",
+        "description": "Classification d'incidents cyber en temps réel via Random Forest et XGBoost sur flux massifs.",
+        "impact": "Détection proactive des menaces et recommandations stratégiques.",
         "tech": ["ML", "Cyber"],
         "stack": ["Python", "Random Forest", "XGBoost"],
         "links": { "project": "https://www.linkedin.com/in/amangoua-n-guetta-emmanuel-adja-955ba3256", "code": "https://github.com/emmanueladja" }
       },
       {
         "name": "Football Match Predictor",
-        "description": "Modèle de classification multi-classes pour Victoire/Nul/Défaite.",
-        "impact": "Pipeline ETL complet et prédictions robustes.",
+        "description": "Modèle de classification multi-classes pour Win/Draw/Loss avec pipeline ETL multi-sources.",
+        "impact": "Prédictions robustes basées sur des statistiques avancées et corrélations.",
         "tech": ["ML"],
         "stack": ["Python", "scikit-learn", "Pandas"],
         "links": { "project": "/football_predictor/fc-1.png", "code": "https://github.com/emmanueladja" },
@@ -261,8 +266,8 @@
       },
       {
         "name": "Business Intelligence PME",
-        "description": "Dashboards Power BI pour pilotage commercial.",
-        "impact": "Transformation des ventes en KPI actionnables.",
+        "description": "Dashboards Power BI interactifs pour le pilotage commercial et KPIs actionnables.",
+        "impact": "Transformation des flux de ventes en indicateurs stratégiques.",
         "tech": ["BI"],
         "stack": ["Power BI"],
         "links": { "project": "/bi_pme/pme-1.png", "code": "https://github.com/emmanueladja" },
@@ -270,8 +275,8 @@
       },
       {
         "name": "Plateforme GED",
-        "description": "Gestion Électronique de Documents (PHP, MySQL).",
-        "impact": "Architecture sécurisée et modélisation UML.",
+        "description": "Gestion Électronique de Documents (PHP, MySQL) avec modélisation UML StarUML.",
+        "impact": "Architecture sécurisée pour la gestion documentaire d'entreprise.",
         "tech": ["Web"],
         "stack": ["PHP", "MySQL", "UML"],
         "links": { "project": "https://www.linkedin.com/in/amangoua-n-guetta-emmanuel-adja-955ba3256", "code": "https://github.com/emmanueladja" }
