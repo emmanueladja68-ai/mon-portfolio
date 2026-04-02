@@ -212,7 +212,7 @@
         "impact": "Identification des causes racines de retards par région et segment client.",
         "tech": ["BI", "Logistique"],
         "stack": ["Power BI", "DAX", "Data Viz"],
-        "links": { "project": "/performance_logistique/pme-1.png.png", "code": "https://github.com/emmanueladja" },
+        "links": { "project": "/performance_logistique/pme-1.png.png", "code": "https://github.com/emmanueladja68-ai68-ai" },
         "gallery": [
           "/performance_logistique/pme-1.png.png", "/performance_logistique/pme-2.png.png",
           "/performance_logistique/pme-3.png.png", "/performance_logistique/pme-4.png.png"
@@ -224,7 +224,7 @@
         "impact": "Isoler les signaux faibles de panne avec une AUC-ROC de 0.98.",
         "tech": ["ML", "MLOps"],
         "stack": ["Python", "SMOTE", "Streamlit", "GridSearchCV"],
-        "links": { "project": "/prediction_de_panne/pn_1.png", "code": "https://github.com/emmanueladja" },
+        "links": { "project": "/prediction_de_panne/pn_1.png", "code": "https://github.com/emmanueladja68-ai" },
         "gallery": [
           "/prediction_de_panne/pn_1.png", "/prediction_de_panne/pn_2.png", "/prediction_de_panne/pn_3.png",
           "/prediction_de_panne/pn_4.png", "/prediction_de_panne/pn_5.png", "/prediction_de_panne/pn_6.png",
@@ -238,7 +238,7 @@
         "impact": "Optimisation financière via l'IA générative et storytelling data.",
         "tech": ["IA", "LLM"],
         "stack": ["Python", "LLMs", "Pandas"],
-        "links": { "project": "/hackaton/demo1.mp4", "code": "https://github.com/emmanueladja" },
+        "links": { "project": "/hackaton/demo1.mp4", "code": "https://github.com/emmanueladja68-ai" },
         "gallery": ["/hackaton/demo1.mp4", "/hackaton/fc-1.png", "/hackaton/fc-2.png", "/hackaton/fc-3.png"]
       },
       {
@@ -247,7 +247,7 @@
         "impact": "Détection proactive des menaces et recommandations stratégiques.",
         "tech": ["ML", "Cyber"],
         "stack": ["Python", "Random Forest", "XGBoost"],
-        "links": { "project": "https://www.linkedin.com/in/amangoua-n-guetta-emmanuel-adja-955ba3256", "code": "https://github.com/emmanueladja" }
+        "links": { "project": "https://www.linkedin.com/in/amangoua-n-guetta-emmanuel-adja-955ba3256", "code": "https://github.com/emmanueladja68-ai" }
       },
       {
         "name": "Football Match Predictor",
@@ -255,7 +255,7 @@
         "impact": "Prédictions robustes basées sur des statistiques avancées et corrélations.",
         "tech": ["ML"],
         "stack": ["Python", "scikit-learn", "Pandas"],
-        "links": { "project": "/football_predictor/fc-1.png", "code": "https://github.com/emmanueladja" },
+        "links": { "project": "/football_predictor/fc-1.png", "code": "https://github.com/emmanueladja68-ai" },
         "gallery": [
           "/football_predictor/fc-1.png", "/football_predictor/fc-2.png", "/football_predictor/fc-3.png",
           "/football_predictor/fc-4.png", "/football_predictor/fc-5.png", "/football_predictor/fc-6.png",
@@ -270,7 +270,7 @@
         "impact": "Transformation des flux de ventes en indicateurs stratégiques.",
         "tech": ["BI"],
         "stack": ["Power BI"],
-        "links": { "project": "/bi_pme/pme-1.png", "code": "https://github.com/emmanueladja" },
+        "links": { "project": "/bi_pme/pme-1.png", "code": "https://github.com/emmanueladja68-ai" },
         "gallery": ["/bi_pme/pme-1.png", "/bi_pme/pme-2.png", "/bi_pme/pme-3.png", "/bi_pme/pme-4.png", "/bi_pme/pme-5.png"]
       },
       {
@@ -279,7 +279,7 @@
         "impact": "Architecture sécurisée pour la gestion documentaire d'entreprise.",
         "tech": ["Web"],
         "stack": ["PHP", "MySQL", "UML"],
-        "links": { "project": "https://www.linkedin.com/in/amangoua-n-guetta-emmanuel-adja-955ba3256", "code": "https://github.com/emmanueladja" }
+        "links": { "project": "https://www.linkedin.com/in/amangoua-n-guetta-emmanuel-adja-955ba3256", "code": "https://github.com/emmanueladja68-ai" }
       }
     ]
   },
@@ -295,7 +295,7 @@
       "phone": "+33 7 46 57 50 64",
       "location": "Île-de-France",
       "availability": "À la recherche d’un stage / d’une alternance",
-      "github": "https://github.com/emmanueladja",
+      "github": "https://github.com/emmanueladja68-ai",
       "linkedin": "https://www.linkedin.com/in/amangoua-n-guetta-emmanuel-adja-955ba3256"
     }
   },
