@@ -1,6 +1,6 @@
-import { useMemo, useState } from 'react'
-import { motion, useReducedMotion } from 'framer-motion'
-import { Github, ExternalLink, Code2 } from 'lucide-react'
+import { useMemo, useState, useEffect } from 'react'
+import { motion, useReducedMotion, AnimatePresence } from 'framer-motion'
+import { Github, ExternalLink, Code2, X, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 
 import { MotionReveal } from '../components/MotionReveal'
@@ -23,11 +23,39 @@ export default function Projects() {
   }, [allLabel, items])
   
   const [activeFilter, setActiveFilter] = useState(allLabel)
+  const [lightbox, setLightbox] = useState<{ isOpen: boolean; items: string[]; index: number; title: string }>({
+    isOpen: false,
+    items: [],
+    index: 0,
+    title: ''
+  })
 
-  // Reset active filter when language changes if the current filter is "All" (localized)
-  // This is a bit tricky, simpler to just reset to new allLabel if previous was old allLabel
-  // But for now let's just use the current allLabel as default if state is empty or invalid
-  
+  // Prevent scroll when lightbox is open
+  useEffect(() => {
+    if (lightbox.isOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => { document.body.style.overflow = '' }
+  }, [lightbox.isOpen])
+
+  const openLightbox = (items: string[], index: number, title: string) => {
+    setLightbox({ isOpen: true, items, index, title })
+  }
+
+  const closeLightbox = () => {
+    setLightbox(prev => ({ ...prev, isOpen: false }))
+  }
+
+  const nextLightbox = () => {
+    setLightbox(prev => ({ ...prev, index: (prev.index + 1) % prev.items.length }))
+  }
+
+  const prevLightbox = () => {
+    setLightbox(prev => ({ ...prev, index: (prev.index - 1 + prev.items.length) % prev.items.length }))
+  }
+
   const filteredProjects = useMemo(() => {
     if (!items) return []
     if (activeFilter === allLabel) {
@@ -94,7 +122,11 @@ export default function Projects() {
                 </div>
 
             {Array.isArray(project?.gallery) && project.gallery.length > 0 ? (
-              <MediaCarousel items={project.gallery} title={project.name} />
+              <MediaCarousel 
+                items={project.gallery} 
+                title={project.name} 
+                onExpand={(idx) => openLightbox(project.gallery, idx, project.name)} 
+              />
             ) : (
               <PlaceholderVisual />
             )}
@@ -128,12 +160,76 @@ export default function Projects() {
         ))}
       </div>
 
-      {null}
+      <AnimatePresence>
+        {lightbox.isOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-background/95 backdrop-blur-xl p-4 md:p-8"
+          >
+            <button
+              onClick={closeLightbox}
+              className="absolute top-6 right-6 p-3 rounded-full bg-muted/50 hover:bg-muted text-foreground z-[110] transition-colors"
+              aria-label="Close"
+            >
+              <X size={24} />
+            </button>
+
+            <div className="relative w-full max-w-5xl aspect-video flex items-center justify-center group">
+              {lightbox.items.length > 1 && (
+                <>
+                  <button
+                    onClick={(e) => { e.stopPropagation(); prevLightbox(); }}
+                    className="absolute left-0 md:-left-16 top-1/2 -translate-y-1/2 p-3 rounded-full bg-muted/50 hover:bg-muted text-foreground z-[110] transition-all opacity-0 group-hover:opacity-100"
+                  >
+                    <ChevronLeft size={32} />
+                  </button>
+                  <button
+                    onClick={(e) => { e.stopPropagation(); nextLightbox(); }}
+                    className="absolute right-0 md:-right-16 top-1/2 -translate-y-1/2 p-3 rounded-full bg-muted/50 hover:bg-muted text-foreground z-[110] transition-all opacity-0 group-hover:opacity-100"
+                  >
+                    <ChevronRight size={32} />
+                  </button>
+                </>
+              )}
+
+              <div className="w-full h-full flex flex-col items-center justify-center gap-4">
+                <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl border border-border/50 bg-black/20">
+                  {/\.mp4(\?|$)/i.test(lightbox.items[lightbox.index]) ? (
+                    <video
+                      key={lightbox.items[lightbox.index]}
+                      src={lightbox.items[lightbox.index]}
+                      className="w-full h-full object-contain"
+                      controls
+                      autoPlay
+                    />
+                  ) : (
+                    <img
+                      key={lightbox.items[lightbox.index]}
+                      src={lightbox.items[lightbox.index]}
+                      alt={lightbox.title}
+                      className="w-full h-full object-contain"
+                    />
+                  )}
+                </div>
+                
+                <div className="flex flex-col items-center gap-1">
+                  <h4 className="text-lg font-semibold text-foreground">{lightbox.title}</h4>
+                  <p className="text-sm text-muted-foreground bg-muted/50 px-3 py-1 rounded-full border border-border/50">
+                    {lightbox.index + 1} / {lightbox.items.length}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   )
 }
 
-function MediaCarousel({ items, title }: { items: string[]; title: string }) {
+function MediaCarousel({ items, title, onExpand }: { items: string[]; title: string; onExpand: (index: number) => void }) {
   const { t } = useTranslation()
   const [index, setIndex] = useState(0)
   const total = items.length
@@ -142,11 +238,17 @@ function MediaCarousel({ items, title }: { items: string[]; title: string }) {
   const counterText = isVideo
     ? t('projects.counter.video', { current: index + 1, total })
     : t('projects.counter.photo', { current: index + 1, total })
-  const prev = () => setIndex((i) => (i - 1 + total) % total)
-  const next = () => setIndex((i) => (i + 1) % total)
+  const prev = (e: React.MouseEvent) => { e.stopPropagation(); setIndex((i) => (i - 1 + total) % total); }
+  const next = (e: React.MouseEvent) => { e.stopPropagation(); setIndex((i) => (i + 1) % total); }
 
   return (
-    <div className="relative rounded-lg overflow-hidden border border-border/50 bg-muted/20">
+    <div 
+      className="relative rounded-lg overflow-hidden border border-border/50 bg-muted/20 cursor-zoom-in group/carousel"
+      onClick={() => onExpand(index)}
+    >
+      <div className="absolute inset-0 bg-primary/0 group-hover/carousel:bg-primary/5 transition-colors z-10 flex items-center justify-center">
+        <Maximize2 className="text-white opacity-0 group-hover/carousel:opacity-100 transition-opacity drop-shadow-lg" size={32} />
+      </div>
       {isVideo ? (
         <video
           key={current}
@@ -171,7 +273,7 @@ function MediaCarousel({ items, title }: { items: string[]; title: string }) {
           <button
             type="button"
             onClick={prev}
-            className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-background/80 backdrop-blur border border-border px-3 py-1 text-sm"
+            className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-background/80 backdrop-blur border border-border px-3 py-1 text-sm z-20 hover:bg-background transition-colors"
             aria-label="Previous"
           >
             ‹
@@ -179,12 +281,12 @@ function MediaCarousel({ items, title }: { items: string[]; title: string }) {
           <button
             type="button"
             onClick={next}
-            className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-background/80 backdrop-blur border border-border px-3 py-1 text-sm"
+            className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-background/80 backdrop-blur border border-border px-3 py-1 text-sm z-20 hover:bg-background transition-colors"
             aria-label="Next"
           >
             ›
           </button>
-          <div className="absolute bottom-2 right-2 text-xs px-2 py-0.5 rounded bg-background/80 border border-border">
+          <div className="absolute bottom-2 right-2 text-xs px-2 py-0.5 rounded bg-background/80 border border-border z-20">
             {counterText}
           </div>
         </>
