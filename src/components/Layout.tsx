@@ -1,12 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useState, useEffect } from 'react'
 import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom'
-import {
-  AnimatePresence,
-  motion,
-  useScroll,
-  useSpring,
-  useMotionValueEvent,
-} from 'framer-motion'
 import { Menu, Moon, Sun, X, Github, Linkedin, Mail, Languages } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 
@@ -25,21 +18,17 @@ export function Layout() {
   })
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const { scrollY } = useScroll()
-  const { scrollYProgress } = useScroll()
   const location = useLocation()
   const navigate = useNavigate()
   const { t, i18n } = useTranslation()
 
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
-  })
-
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    setIsScrolled(latest > 50)
-  })
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   useEffect(() => {
     const root = document.documentElement
@@ -109,12 +98,6 @@ export function Layout() {
 
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-primary/20 selection:text-primary">
-      {/* Progress Bar */}
-      <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-primary z-50 origin-left"
-        style={{ scaleX }}
-      />
-
       {/* Desktop Navigation - Floating Pill */}
       <header
         className={cn(
@@ -216,71 +199,57 @@ export function Layout() {
       </header>
 
       {/* Mobile Menu Overlay */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <>
-            <motion.button
+      {/* Mobile Navigation - Overlay and Menu */}
+      {isMobileMenuOpen && (
+        <>
+          <div
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm md:hidden"
+          />
+          <div
+            className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border shadow-2xl pt-20 px-6 md:hidden animate-in fade-in slide-in-from-top-4 duration-200"
+          >
+            <button
               type="button"
-              aria-label="Close menu"
+              aria-label="Fermer le menu"
               onClick={() => setIsMobileMenuOpen(false)}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm md:hidden"
-            />
-            <motion.div
-              initial={{ opacity: 0, y: -24 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -24 }}
-              className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border shadow-2xl pt-20 px-6 md:hidden"
+              className="absolute top-4 right-4 h-10 w-10 rounded-full border border-border flex items-center justify-center hover:bg-muted"
             >
-              <button
-                type="button"
-                aria-label="Fermer le menu"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="absolute top-4 right-4 h-10 w-10 rounded-full border border-border flex items-center justify-center hover:bg-muted"
-              >
-                <X />
-              </button>
-              <nav className="flex flex-col gap-4 text-xl font-medium pb-6">
-                {navigation.links.map((link: any, index: number) => (
-                  <motion.div
-                    key={link.href}
-                    initial={{ opacity: 0, x: -12 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.05 }}
+              <X />
+            </button>
+            <nav className="flex flex-col gap-4 text-xl font-medium pb-6">
+              {navigation.links.map((link: any, index: number) => (
+                <div key={link.href} className="animate-in fade-in slide-in-from-left-2 duration-200 fill-mode-both" style={{ animationDelay: `${index * 50}ms` }}>
+                  <NavLink
+                    to={getLocalizedPath(link.href)}
+                    className={({ isActive }) =>
+                      cn(
+                        "block py-3 border-b border-border/50",
+                        isActive ? "text-primary" : "text-muted-foreground hover:text-foreground"
+                      )
+                    }
                   >
-                    <NavLink
-                      to={getLocalizedPath(link.href)}
-                      className={({ isActive }) =>
-                        cn(
-                          "block py-3 border-b border-border/50",
-                          isActive ? "text-primary" : "text-muted-foreground hover:text-foreground"
-                        )
-                      }
-                    >
-                      {link.label}
-                    </NavLink>
-                  </motion.div>
-                ))}
-              </nav>
-              <div className="pb-6 space-y-4">
-                <div className="flex items-center justify-between p-4 rounded-xl bg-muted/50">
-                  <span className="text-sm font-medium">Apparence</span>
-                  <div className="flex items-center gap-3">
-                    <Sun size={16} className={!isDark ? "text-primary" : "text-muted-foreground"} />
-                    <Switch checked={isDark} onCheckedChange={setIsDark} />
-                    <Moon size={16} className={isDark ? "text-primary" : "text-muted-foreground"} />
-                  </div>
+                    {link.label}
+                  </NavLink>
                 </div>
-                <Button asChild size="lg" className="w-full text-lg h-12 rounded-xl">
-                  <a href={navigation.cta.href}>{navigation.cta.label}</a>
-                </Button>
+              ))}
+            </nav>
+            <div className="pb-6 space-y-4">
+              <div className="flex items-center justify-between p-4 rounded-xl bg-muted/50">
+                <span className="text-sm font-medium">Apparence</span>
+                <div className="flex items-center gap-3">
+                  <Sun size={16} className={!isDark ? "text-primary" : "text-muted-foreground"} />
+                  <Switch checked={isDark} onCheckedChange={setIsDark} />
+                  <Moon size={16} className={isDark ? "text-primary" : "text-muted-foreground"} />
+                </div>
               </div>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
+              <Button asChild size="lg" className="w-full text-lg h-12 rounded-xl">
+                <a href={navigation.cta.href}>{navigation.cta.label}</a>
+              </Button>
+            </div>
+          </div>
+        </>
+      )}
 
       <main className="pt-24 md:pt-32 pb-16 px-6 max-w-7xl mx-auto min-h-[calc(100vh-200px)]">
         <Outlet />

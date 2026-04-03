@@ -1,5 +1,4 @@
 import { Suspense, lazy, useEffect } from 'react'
-import { MotionConfig } from 'framer-motion'
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
@@ -83,11 +82,9 @@ function App() {
   }, [t])
 
   return (
-    <MotionConfig reducedMotion="user">
-      <Suspense fallback={<LoadingScreen label={t('meta.loadingLabel')} />}>
-        <RouterProvider router={router} />
-      </Suspense>
-    </MotionConfig>
+    <Suspense fallback={<LoadingScreen label={t('meta.loadingLabel')} />}>
+      <RouterProvider router={router} />
+    </Suspense>
   )
 }
 
