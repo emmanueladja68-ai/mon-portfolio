@@ -7,10 +7,22 @@ type MotionRevealProps = {
   className?: string
 }
 
-export function MotionReveal({ children, className }: MotionRevealProps) {
+export function MotionReveal({ children, delay = 0, className }: MotionRevealProps) {
+  const reduceMotion = useReducedMotion()
+
   return (
-    <div className={className}>
+    <motion.div
+      className={className}
+      initial={reduceMotion ? { opacity: 1 } : { opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-20px" }}
+      transition={
+        reduceMotion
+          ? { duration: 0 }
+          : { duration: 0.35, ease: [0.22, 1, 0.36, 1], delay }
+      }
+    >
       {children}
-    </div>
+    </motion.div>
   )
 }

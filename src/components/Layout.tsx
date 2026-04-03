@@ -1,11 +1,19 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom'
+import {
+  motion,
+  useScroll,
+  useSpring,
+  useMotionValueEvent,
+  AnimatePresence,
+} from 'framer-motion'
 import { Menu, Moon, Sun, X, Github, Linkedin, Mail, Languages } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 
 import { Button } from './ui/button'
 import { Switch } from './ui/switch'
 import { cn } from '../lib/utils'
+import { PageTransition } from './PageTransition'
 
 const themeStorageKey = 'portfolio-theme'
 
@@ -18,17 +26,21 @@ export function Layout() {
   })
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const { scrollY } = useScroll()
+  const { scrollYProgress } = useScroll()
   const location = useLocation()
   const navigate = useNavigate()
   const { t, i18n } = useTranslation()
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  })
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    setIsScrolled(latest > 50)
+  })
 
   useEffect(() => {
     const root = document.documentElement
@@ -81,7 +93,6 @@ export function Layout() {
     const newLang = currentLang === 'fr' ? 'en' : 'fr'
     
     const currentPath = location.pathname
-    // retire le préfixe de langue existant et reconstruit correctement
     const stripped = currentPath.replace(/^\/(en|fr)/, '')
     const newPath = `/${newLang}${stripped || ''}`
 
@@ -98,6 +109,12 @@ export function Layout() {
 
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-primary/20 selection:text-primary">
+      {/* Progress Bar */}
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-1 bg-primary z-50 origin-left"
+        style={{ scaleX }}
+      />
+
       {/* Desktop Navigation - Floating Pill */}
       <header
         className={cn(
@@ -112,30 +129,28 @@ export function Layout() {
               to={getLocalizedPath(link.href)}
               className={({ isActive }) =>
                 cn(
-                  "px-3 py-2 text-sm font-medium rounded-full transition-colors relative whitespace-nowrap",
-                  isActive
-                    ? "text-primary-foreground"
-                    : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                  "relative px-4 py-2 text-sm font-medium transition-colors rounded-full hover:text-primary",
+                  isActive ? "text-primary" : "text-muted-foreground"
                 )
               }
             >
               {({ isActive }) => (
                 <>
                   {isActive && (
-                    <div
-                      className="absolute inset-0 bg-primary rounded-full -z-10"
+                    <motion.div
+                      layoutId="active-pill"
+                      className="absolute inset-0 bg-primary/10 rounded-full"
+                      transition={{ type: "spring", duration: 0.5 }}
                     />
                   )}
-                  {link.label}
+                  <span className="relative z-10">{link.label}</span>
                 </>
               )}
             </NavLink>
           ))}
         </div>
-
-        <div className="h-6 w-px bg-border/50 mx-2" />
-
-        <div className="flex items-center gap-2 pr-2">
+        <div className="h-6 w-px bg-border/50 mx-1" />
+        <div className="flex items-center gap-1 px-1">
           <Button
             variant="ghost"
             size="icon"
@@ -143,7 +158,9 @@ export function Layout() {
             onClick={toggleLang}
             aria-label="Toggle Language"
           >
-            <span className="text-xs font-bold">{i18n.language.substring(0, 2).toUpperCase()}</span>
+            <Languages size={18} />
+            <span className="sr-only">Toggle Language</span>
+            <span className="ml-1 text-[10px] font-bold">{i18n.language.substring(0, 2).toUpperCase()}</span>
           </Button>
           <Button
             variant="ghost"
@@ -152,19 +169,9 @@ export function Layout() {
             onClick={() => setIsDark(!isDark)}
             aria-label="Toggle theme"
           >
-            <AnimatePresence mode="wait" initial={false}>
-              <motion.div
-                key={isDark ? "dark" : "light"}
-                initial={{ y: -20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: 20, opacity: 0 }}
-                transition={{ duration: 0.2 }}
-              >
-                {isDark ? <Moon size={16} /> : <Sun size={16} />}
-              </motion.div>
-            </AnimatePresence>
+            {isDark ? <Sun size={18} /> : <Moon size={18} />}
           </Button>
-          <Button asChild size="sm" className="rounded-full px-5">
+          <Button asChild size="sm" className="rounded-full px-5 h-9">
             <a href={navigation.cta.href} target="_blank" rel="noopener noreferrer">
               {navigation.cta.label}
             </a>
@@ -183,76 +190,92 @@ export function Layout() {
             size="icon"
             className="rounded-full w-9 h-9"
             onClick={toggleLang}
-            aria-label="Toggle Language"
           >
-            <span className="text-xs font-bold">{i18n.language.substring(0, 2).toUpperCase()}</span>
+            <span className="text-[10px] font-bold">{i18n.language.substring(0, 2).toUpperCase()}</span>
           </Button>
           <Button
             variant="ghost"
             size="icon"
+            className="rounded-full w-9 h-9"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Menu"
+            aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X /> : <Menu />}
+            {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </Button>
         </div>
       </header>
 
-      {/* Mobile Menu Overlay */}
       {/* Mobile Navigation - Overlay and Menu */}
-      {isMobileMenuOpen && (
-        <>
-          <div
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm md:hidden"
-          />
-          <div
-            className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border shadow-2xl pt-20 px-6 md:hidden animate-in fade-in slide-in-from-top-4 duration-200"
-          >
-            <button
-              type="button"
-              aria-label="Fermer le menu"
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="absolute top-4 right-4 h-10 w-10 rounded-full border border-border flex items-center justify-center hover:bg-muted"
+              className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm md:hidden"
+            />
+            <motion.div
+              initial={{ opacity: 0, y: -24 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -24 }}
+              className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border shadow-2xl pt-20 px-6 md:hidden"
             >
-              <X />
-            </button>
-            <nav className="flex flex-col gap-4 text-xl font-medium pb-6">
-              {navigation.links.map((link: any, index: number) => (
-                <div key={link.href} className="animate-in fade-in slide-in-from-left-2 duration-200 fill-mode-both" style={{ animationDelay: `${index * 50}ms` }}>
-                  <NavLink
-                    to={getLocalizedPath(link.href)}
-                    className={({ isActive }) =>
-                      cn(
-                        "block py-3 border-b border-border/50",
-                        isActive ? "text-primary" : "text-muted-foreground hover:text-foreground"
-                      )
-                    }
+              <button
+                type="button"
+                aria-label="Fermer le menu"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="absolute top-4 right-4 h-10 w-10 rounded-full border border-border flex items-center justify-center hover:bg-muted"
+              >
+                <X />
+              </button>
+              <nav className="flex flex-col gap-4 text-xl font-medium pb-6">
+                {navigation.links.map((link: any, index: number) => (
+                  <motion.div
+                    key={link.href}
+                    initial={{ opacity: 0, x: -12 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.05 }}
                   >
-                    {link.label}
-                  </NavLink>
+                    <NavLink
+                      to={getLocalizedPath(link.href)}
+                      className={({ isActive }) =>
+                        cn(
+                          "block py-3 border-b border-border/50",
+                          isActive ? "text-primary" : "text-muted-foreground hover:text-foreground"
+                        )
+                      }
+                    >
+                      {link.label}
+                    </NavLink>
+                  </motion.div>
+                ))}
+              </nav>
+              <div className="pb-6 space-y-4">
+                <div className="flex items-center justify-between p-4 rounded-xl bg-muted/50">
+                  <span className="text-sm font-medium">Apparence</span>
+                  <div className="flex items-center gap-3">
+                    <Sun size={16} className={!isDark ? "text-primary" : "text-muted-foreground"} />
+                    <Switch checked={isDark} onCheckedChange={setIsDark} />
+                    <Moon size={16} className={isDark ? "text-primary" : "text-muted-foreground"} />
+                  </div>
                 </div>
-              ))}
-            </nav>
-            <div className="pb-6 space-y-4">
-              <div className="flex items-center justify-between p-4 rounded-xl bg-muted/50">
-                <span className="text-sm font-medium">Apparence</span>
-                <div className="flex items-center gap-3">
-                  <Sun size={16} className={!isDark ? "text-primary" : "text-muted-foreground"} />
-                  <Switch checked={isDark} onCheckedChange={setIsDark} />
-                  <Moon size={16} className={isDark ? "text-primary" : "text-muted-foreground"} />
-                </div>
+                <Button asChild size="lg" className="w-full text-lg h-12 rounded-xl">
+                  <a href={navigation.cta.href}>{navigation.cta.label}</a>
+                </Button>
               </div>
-              <Button asChild size="lg" className="w-full text-lg h-12 rounded-xl">
-                <a href={navigation.cta.href}>{navigation.cta.label}</a>
-              </Button>
-            </div>
-          </div>
-        </>
-      )}
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
 
       <main className="pt-24 md:pt-32 pb-16 px-6 max-w-7xl mx-auto min-h-[calc(100vh-200px)]">
-        <Outlet />
+        <AnimatePresence mode="wait">
+          <PageTransition key={location.pathname}>
+            <Outlet />
+          </PageTransition>
+        </AnimatePresence>
       </main>
 
       <footer className="border-t border-border bg-muted/30 py-16 px-6">

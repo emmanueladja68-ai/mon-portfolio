@@ -6,9 +6,20 @@ type PageTransitionProps = {
 }
 
 export function PageTransition({ children }: PageTransitionProps) {
+  const reduceMotion = useReducedMotion()
+
   return (
-    <div className="animate-in fade-in duration-300">
+    <motion.div
+      initial={reduceMotion ? { opacity: 1 } : { opacity: 0, y: 8 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={reduceMotion ? { opacity: 0 } : { opacity: 0, y: -8 }}
+      transition={
+        reduceMotion
+          ? { duration: 0 }
+          : { duration: 0.25, ease: [0.22, 1, 0.36, 1] }
+      }
+    >
       {children}
-    </div>
+    </motion.div>
   )
 }

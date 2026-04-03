@@ -1,4 +1,5 @@
 import { Suspense, lazy, useEffect } from 'react'
+import { MotionConfig, AnimatePresence } from 'framer-motion'
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
@@ -72,9 +73,6 @@ function App() {
         link.hreflang = lang;
         document.head.appendChild(link);
       }
-      // Set correct URL for hreflang
-      // Current path without lang prefix?
-      // This is tricky client-side, but let's try to be helpful.
       const currentPath = window.location.pathname.replace(/^\/(en|fr)/, '');
       link.href = `${window.location.origin}/${lang}${currentPath}`;
     });
@@ -82,9 +80,11 @@ function App() {
   }, [t])
 
   return (
-    <Suspense fallback={<LoadingScreen label={t('meta.loadingLabel')} />}>
-      <RouterProvider router={router} />
-    </Suspense>
+    <MotionConfig reducedMotion="user">
+      <Suspense fallback={<LoadingScreen label={t('meta.loadingLabel')} />}>
+        <RouterProvider router={router} />
+      </Suspense>
+    </MotionConfig>
   )
 }
 
