@@ -207,6 +207,17 @@
     },
     "items": [
       {
+        "name": "Analyse des Matchs de Football",
+        "description": "Visualisation et analyse des données sur les matchs internationaux de football pour étudier l'impact de l'avantage à domicile.",
+        "impact": "Étude statistique approfondie via des graphiques avancés.",
+        "tech": ["Data Viz", "EDA"],
+        "stack": ["Python", "Jupyter", "Matplotlib", "Seaborn"],
+        "links": { "project": "/foot/foot1.png", "code": "https://github.com/emmanueladja68-ai" },
+        "gallery": [
+          "/foot/foot1.png", "/foot/foot2.png", "/foot/foot3.png", "/foot/foot4.png"
+        ]
+      },
+      {
         "name": "Analytics Supply Chain & Logistique",
         "description": "Dashboard interactif pour le pilotage des flux mondiaux et l'analyse des retards de livraison.",
         "impact": "Identification des causes racines de retards par région et segment client.",

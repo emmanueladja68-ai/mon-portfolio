@@ -207,6 +207,17 @@
     },
     "items": [
       {
+        "name": "Football Match Analysis",
+        "description": "Data visualization and analysis of international football matches to study the home advantage impact.",
+        "impact": "In‑depth statistical study using advanced charts.",
+        "tech": ["Data Viz", "EDA"],
+        "stack": ["Python", "Jupyter", "Matplotlib", "Seaborn"],
+        "links": { "project": "/foot/foot1.png", "code": "https://github.com/emmanueladja68-ai" },
+        "gallery": [
+          "/foot/foot1.png", "/foot/foot2.png", "/foot/foot3.png", "/foot/foot4.png"
+        ]
+      },
+      {
         "name": "Supply Chain & Logistics Analytics",
         "description": "Interactive dashboard for global flow steering and delivery delay analysis.",
         "impact": "Identification of root causes for delays by region and customer segment.",
