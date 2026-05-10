@@ -207,6 +207,17 @@
     },
     "items": [
       {
+        "name": "Audit Commercial International",
+        "description": "Analyse approfondie des performances commerciales internationales avec visualisation stratégique des ventes et des clients.",
+        "impact": "Optimisation des stratégies commerciales via des dashboards interactifs et des insights data-driven.",
+        "tech": ["BI", "Commercial"],
+        "stack": ["Power BI", "DAX", "Data Viz"],
+        "links": { "project": "/Audit Commercial International/pme-1.png", "code": "https://github.com/emmanueladja68-ai" },
+        "gallery": [
+          "/Audit Commercial International/pme-1.png", "/Audit Commercial International/pme-2.png", "/Audit Commercial International/pme-3.png", "/Audit Commercial International/pme-4.png", "/Audit Commercial International/pme-5.png"
+        ]
+      },
+      {
         "name": "Analyse des Matchs de Football",
         "description": "Visualisation et analyse des données sur les matchs internationaux de football pour étudier l'impact de l'avantage à domicile.",
         "impact": "Étude statistique approfondie via des graphiques avancés.",
